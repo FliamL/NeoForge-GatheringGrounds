@@ -10,10 +10,11 @@ public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MoreFlowers.MOD_ID);
 
     public static final DeferredItem<Item> TANSY = ITEMS.register("tansy",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().food(ModFoodProperties.TANSY)));
 
     public static final DeferredItem<Item> TANSY_PANCAKE = ITEMS.register("tansy_pancake",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().food(ModFoodProperties.TANSY_PANCAKE)));
+
 
 
     public static void register(IEventBus eventBus) {

@@ -1,8 +1,9 @@
 package net.liamlanderloos.moreflowers;
 
+import net.liamlanderloos.moreflowers.effect.ModEffects;
+import net.liamlanderloos.moreflowers.event.PlayerDeathHandler;
 import net.liamlanderloos.moreflowers.item.ModCreativeModeTabs;
 import net.liamlanderloos.moreflowers.item.ModItems;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
@@ -40,7 +41,10 @@ public class MoreFlowers {
 
 
         ModCreativeModeTabs.register(modEventBus);
+        PlayerDeathHandler.register();
         ModItems.register(modEventBus);
+        ModEffects.register(modEventBus);
+
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
