@@ -5,6 +5,7 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.protocol.game.ClientboundEntityEventPacket;
 import net.minecraft.network.protocol.game.ClientboundSoundPacket;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
@@ -28,7 +29,7 @@ public class PlayerDeathHandler {
         if (!player.hasEffect(ModEffects.TANSY_EFFECT)) {
             return ;
         }
-
+        //player.connection.send(new ClientboundEntityEventPacket(player, (byte) 35));
         player.level().playSound(
                 null, // null means play for all nearby players
                 player.getX(),
