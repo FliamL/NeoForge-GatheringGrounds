@@ -39,7 +39,6 @@ public class MoreFlowers {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
-
         ModCreativeModeTabs.register(modEventBus);
         PlayerDeathHandler.register();
         ModItems.register(modEventBus);
@@ -58,7 +57,7 @@ public class MoreFlowers {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.TANSY);
             event.accept(ModItems.TANSY_PANCAKE);
         }

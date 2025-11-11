@@ -15,8 +15,6 @@ public class ModItems {
     public static final DeferredItem<Item> TANSY_PANCAKE = ITEMS.register("tansy_pancake",
             () -> new Item(new Item.Properties().food(ModFoodProperties.TANSY_PANCAKE)));
 
-
-
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

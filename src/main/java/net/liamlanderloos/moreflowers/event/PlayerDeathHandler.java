@@ -3,19 +3,16 @@ package net.liamlanderloos.moreflowers.event;
 import net.liamlanderloos.moreflowers.effect.ModEffects;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.Holder;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.game.ClientboundSoundPacket;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.neoforge.common.conditions.ICondition;
-import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 
 public class PlayerDeathHandler {
 
@@ -77,6 +74,5 @@ public class PlayerDeathHandler {
         );
 
         player.removeEffect(ModEffects.TANSY_EFFECT);
-
     }
 }
