@@ -15,7 +15,7 @@ The project uses Minecraft to model magical systems as alternative epistemologie
 ## Items: 
 | Item name  | Description|
 | ------------- | ------------- |
-| Tansy Pancake | Gives undying effect for 15 seconds (WIP: Still need to figure out how to add the totem of undying effect on the pancake)  |
+| Tansy Pancake | If you eat this plant it gives you the Tansy effect for 20 second. If you die while having the effect. You instantly respawn at your spawn location with full health. The effects ends after this|
 
 
 
