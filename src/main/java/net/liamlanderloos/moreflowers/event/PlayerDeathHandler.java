@@ -1,9 +1,11 @@
 package net.liamlanderloos.moreflowers.event;
 
 import net.liamlanderloos.moreflowers.effect.ModEffects;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.Holder;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.game.ClientboundSoundPacket;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -55,6 +57,7 @@ public class PlayerDeathHandler {
                 player.getYRot(),
                 player.getXRot()
         );
+
         Holder<SoundEvent> totemSound = BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.TOTEM_USE);
 
         player.connection.send(new ClientboundSoundPacket(
@@ -68,8 +71,10 @@ public class PlayerDeathHandler {
                 1
         ));
 
-
-        player.playSound(SoundEvents.TOTEM_USE, 1.0F, 1.0F);
+        player.sendSystemMessage(
+                Component.literal("The Tansy's blessing saves you from death!")
+                        .withStyle(ChatFormatting.GOLD, ChatFormatting.BOLD)
+        );
 
         player.removeEffect(ModEffects.TANSY_EFFECT);
 
