@@ -1,5 +1,6 @@
 package net.liamlanderloos.moreflowers;
 
+import net.liamlanderloos.moreflowers.block.ModBlocks;
 import net.liamlanderloos.moreflowers.effect.ModEffects;
 import net.liamlanderloos.moreflowers.event.PlayerDeathHandler;
 import net.liamlanderloos.moreflowers.item.ModCreativeModeTabs;
@@ -34,6 +35,8 @@ public class MoreFlowers {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
+
+
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
@@ -41,6 +44,7 @@ public class MoreFlowers {
 
         ModCreativeModeTabs.register(modEventBus);
         PlayerDeathHandler.register();
+        ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
         ModEffects.register(modEventBus);
 
@@ -58,8 +62,7 @@ public class MoreFlowers {
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.TANSY);
-            event.accept(ModItems.TANSY_PANCAKE);
+
         }
     }
 

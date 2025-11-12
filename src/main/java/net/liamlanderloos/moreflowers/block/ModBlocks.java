@@ -1,0 +1,55 @@
+package net.liamlanderloos.moreflowers.block;
+
+import net.liamlanderloos.moreflowers.MoreFlowers;
+import net.liamlanderloos.moreflowers.item.ModItems;
+import net.minecraft.client.resources.model.Material;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerBlock;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredRegister;
+
+import java.util.function.Supplier;
+
+public class ModBlocks {
+    public static final DeferredRegister.Blocks BLOCKS =
+            DeferredRegister.createBlocks(MoreFlowers.MOD_ID);
+
+    public static final DeferredBlock<Block> TANSY_BLOCK = registerBlock("tansy_block",
+            () -> new FlowerBlock(
+                    MobEffects.NIGHT_VISION,
+                    5.0F,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.PLANT)
+                            .noCollission()
+                            .instabreak()
+                            .sound(SoundType.GRASS)
+                            .offsetType(BlockBehaviour.OffsetType.XZ)
+                            .pushReaction(PushReaction.DESTROY)
+
+            ));
+
+
+
+    private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> supplier) {
+        DeferredBlock<T> toReturn = BLOCKS.register(name, supplier);
+        registerBlockitem(name, toReturn);
+        return toReturn;
+    }
+
+    private static <T extends Block> void registerBlockitem(String name, DeferredBlock<T> block){
+        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+    }
+
+    public static void register(IEventBus eventBus) {
+        BLOCKS.register(eventBus);
+    }
+}

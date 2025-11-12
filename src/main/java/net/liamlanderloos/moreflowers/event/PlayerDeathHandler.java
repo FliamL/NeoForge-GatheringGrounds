@@ -29,7 +29,7 @@ public class PlayerDeathHandler {
         if (!player.hasEffect(ModEffects.TANSY_EFFECT)) {
             return ;
         }
-        //player.connection.send(new ClientboundEntityEventPacket(player, (byte) 35));
+
         player.level().playSound(
                 null, // null means play for all nearby players
                 player.getX(),
