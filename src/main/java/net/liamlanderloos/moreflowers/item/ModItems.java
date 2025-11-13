@@ -3,6 +3,7 @@ package net.liamlanderloos.moreflowers.item;
 import net.liamlanderloos.moreflowers.MoreFlowers;
 import net.liamlanderloos.moreflowers.block.ModBlocks;
 import net.minecraft.world.food.Foods;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.level.block.Blocks;
@@ -14,7 +15,7 @@ public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MoreFlowers.MOD_ID);
 
     public static final DeferredItem<Item> TANSY = ITEMS.register("tansy",
-            () -> new ItemNameBlockItem(
+            () -> new BlockItem(
                     ModBlocks.TANSY_BLOCK.get(), // the block itself
                     new Item.Properties().food(ModFoodProperties.TANSY) // edible properties
             ));

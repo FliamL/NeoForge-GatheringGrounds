@@ -2,12 +2,10 @@ package net.liamlanderloos.moreflowers.block;
 
 import net.liamlanderloos.moreflowers.MoreFlowers;
 import net.liamlanderloos.moreflowers.item.ModItems;
-import net.minecraft.client.resources.model.Material;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -23,7 +21,7 @@ public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(MoreFlowers.MOD_ID);
 
-    public static final DeferredBlock<Block> TANSY_BLOCK = registerBlock("tansy_block",
+    public static final DeferredBlock<Block> TANSY_BLOCK = BLOCKS.register("tansy",
             () -> new FlowerBlock(
                     MobEffects.NIGHT_VISION,
                     5.0F,
@@ -36,7 +34,6 @@ public class ModBlocks {
                             .pushReaction(PushReaction.DESTROY)
 
             ));
-
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> supplier) {
