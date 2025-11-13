@@ -3,10 +3,12 @@ package net.liamlanderloos.moreflowers.event;
 import net.liamlanderloos.moreflowers.effect.ModEffects;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.Holder;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.game.ClientboundEntityEventPacket;
 import net.minecraft.network.protocol.game.ClientboundSoundPacket;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -68,7 +70,16 @@ public class PlayerDeathHandler {
                 1.0F,
                 1
         ));
-
+        ServerLevel level = (ServerLevel) player.level();
+        level.sendParticles(
+                ParticleTypes.TOTEM_OF_UNDYING,
+                player.getX(),
+                player.getY() + 1.0,
+                player.getZ(),
+                100,           // particle count
+                0.5, 1.0, 0.5, // spread X, Y, Z
+                0.2            // speed
+        );
         player.sendSystemMessage(
                 Component.literal("The Tansy's blessing saves you from death!")
                         .withStyle(ChatFormatting.GOLD, ChatFormatting.BOLD)
