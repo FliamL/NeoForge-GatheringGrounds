@@ -22,6 +22,7 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.TANSY);
                         output.accept(ModItems.TANSY_PANCAKE);
+                        output.accept((ModBlocks.MUD_POT));
                     })
                     .build());
 

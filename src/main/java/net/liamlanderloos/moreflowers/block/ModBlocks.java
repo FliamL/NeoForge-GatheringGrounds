@@ -1,6 +1,7 @@
 package net.liamlanderloos.moreflowers.block;
 
 import net.liamlanderloos.moreflowers.MoreFlowers;
+import net.liamlanderloos.moreflowers.block.custom.MudPotBlock;
 import net.liamlanderloos.moreflowers.item.ModItems;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
@@ -34,6 +35,12 @@ public class ModBlocks {
                             .pushReaction(PushReaction.DESTROY)
 
             ));
+
+    public static final DeferredBlock<Block> MUD_POT = registerBlock("mud_pot",
+            () -> new MudPotBlock(BlockBehaviour.Properties.of()
+                    .strength(0.0F)
+                    .noOcclusion()
+                    .sound(SoundType.GRASS)));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> supplier) {
