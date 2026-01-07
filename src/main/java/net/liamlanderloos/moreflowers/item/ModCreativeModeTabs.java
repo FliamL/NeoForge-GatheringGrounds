@@ -23,6 +23,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.TANSY);
                         output.accept(ModItems.TANSY_PANCAKE);
                         output.accept((ModBlocks.MUD_POT));
+                        output.accept(ModItems.COMFREY);
+                        output.accept(ModItems.HOREHOUND);
                     })
                     .build());
 

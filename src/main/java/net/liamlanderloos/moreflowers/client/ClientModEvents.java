@@ -17,6 +17,10 @@ public class ClientModEvents {
     public static void clientSetup(FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.TANSY_BLOCK.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.COMFREY_BLOCK.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.HOREHOUND_BLOCK.get(), RenderType.cutout());
         });
     }
+
+
 }

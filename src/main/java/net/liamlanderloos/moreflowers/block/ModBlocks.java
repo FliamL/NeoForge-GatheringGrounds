@@ -36,6 +36,34 @@ public class ModBlocks {
 
             ));
 
+    public static final DeferredBlock<Block> COMFREY_BLOCK = BLOCKS.register("comfrey",
+            () -> new FlowerBlock(
+                    MobEffects.NIGHT_VISION,
+                    5.0F,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.PLANT)
+                            .noCollission()
+                            .instabreak()
+                            .sound(SoundType.GRASS)
+                            .offsetType(BlockBehaviour.OffsetType.XZ)
+                            .pushReaction(PushReaction.DESTROY)
+
+            ));
+
+    public static final DeferredBlock<Block> HOREHOUND_BLOCK = BLOCKS.register("horehound",
+            () -> new FlowerBlock(
+                    MobEffects.NIGHT_VISION,
+                    5.0F,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.PLANT)
+                            .noCollission()
+                            .instabreak()
+                            .sound(SoundType.GRASS)
+                            .offsetType(BlockBehaviour.OffsetType.XZ)
+                            .pushReaction(PushReaction.DESTROY)
+
+            ));
+
     public static final DeferredBlock<Block> MUD_POT = registerBlock("mud_pot",
             () -> new MudPotBlock(BlockBehaviour.Properties.of()
                     .strength(0.0F)
