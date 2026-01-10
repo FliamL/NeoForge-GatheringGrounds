@@ -6,9 +6,7 @@ import net.liamlanderloos.moreflowers.item.ModItems;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.FlowerBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
@@ -133,6 +131,223 @@ public class ModBlocks {
                             .pushReaction(PushReaction.DESTROY)
 
             ));
+
+    public static final DeferredBlock<Block> NETTLE_BLOCK = BLOCKS.register("nettle",
+            () -> new FlowerBlock(
+                    MobEffects.NIGHT_VISION,
+                    5.0F,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.PLANT)
+                            .noCollission()
+                            .instabreak()
+                            .sound(SoundType.GRASS)
+                            .offsetType(BlockBehaviour.OffsetType.XZ)
+                            .pushReaction(PushReaction.DESTROY)
+
+            ));
+
+    public static final DeferredBlock<Block> PEPPERMINT_BLOCK = BLOCKS.register("peppermint",
+            () -> new FlowerBlock(
+                    MobEffects.NIGHT_VISION,
+                    5.0F,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.PLANT)
+                            .noCollission()
+                            .instabreak()
+                            .sound(SoundType.GRASS)
+                            .offsetType(BlockBehaviour.OffsetType.XZ)
+                            .pushReaction(PushReaction.DESTROY)
+
+            ));
+
+    public static final DeferredBlock<Block> PLANTAIN_BLOCK = BLOCKS.register("plantain",
+            () -> new FlowerBlock(
+                    MobEffects.NIGHT_VISION,
+                    5.0F,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.PLANT)
+                            .noCollission()
+                            .instabreak()
+                            .sound(SoundType.GRASS)
+                            .offsetType(BlockBehaviour.OffsetType.XZ)
+                            .pushReaction(PushReaction.DESTROY)
+
+            ));
+
+    public static final DeferredBlock<Block> ROSEMARY_BLOCK = BLOCKS.register("rosemary",
+            () -> new FlowerBlock(
+                    MobEffects.NIGHT_VISION,
+                    5.0F,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.PLANT)
+                            .noCollission()
+                            .instabreak()
+                            .sound(SoundType.GRASS)
+                            .offsetType(BlockBehaviour.OffsetType.XZ)
+                            .pushReaction(PushReaction.DESTROY)
+
+            ));
+
+    public static final DeferredBlock<Block> ROZENBOTTEL_BLOCK = BLOCKS.register("rozenbottel",
+            () -> new FlowerBlock(
+                    MobEffects.NIGHT_VISION,
+                    5.0F,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.PLANT)
+                            .noCollission()
+                            .instabreak()
+                            .sound(SoundType.GRASS)
+                            .offsetType(BlockBehaviour.OffsetType.XZ)
+                            .pushReaction(PushReaction.DESTROY)
+
+            ));
+
+    public static final DeferredBlock<Block> RUE_BLOCK = BLOCKS.register("rue",
+            () -> new FlowerBlock(
+                    MobEffects.NIGHT_VISION,
+                    5.0F,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.PLANT)
+                            .noCollission()
+                            .instabreak()
+                            .sound(SoundType.GRASS)
+                            .offsetType(BlockBehaviour.OffsetType.XZ)
+                            .pushReaction(PushReaction.DESTROY)
+
+            ));
+
+    public static final DeferredBlock<Block> SAGE_BLOCK = BLOCKS.register("sage",
+            () -> new FlowerBlock(
+                    MobEffects.NIGHT_VISION,
+                    5.0F,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.PLANT)
+                            .noCollission()
+                            .instabreak()
+                            .sound(SoundType.GRASS)
+                            .offsetType(BlockBehaviour.OffsetType.XZ)
+                            .pushReaction(PushReaction.DESTROY)
+
+            ));
+
+    public static final DeferredBlock<Block> TANSYFLOWERING_BLOCK = BLOCKS.register("tansyflowering",
+            () -> new FlowerBlock(
+                    MobEffects.NIGHT_VISION,
+                    5.0F,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.PLANT)
+                            .noCollission()
+                            .instabreak()
+                            .sound(SoundType.GRASS)
+                            .offsetType(BlockBehaviour.OffsetType.XZ)
+                            .pushReaction(PushReaction.DESTROY)
+
+            ));
+
+    public static final DeferredBlock<Block> THYME_BLOCK = BLOCKS.register("thyme",
+            () -> new FlowerBlock(
+                    MobEffects.NIGHT_VISION,
+                    5.0F,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.PLANT)
+                            .noCollission()
+                            .instabreak()
+                            .sound(SoundType.GRASS)
+                            .offsetType(BlockBehaviour.OffsetType.XZ)
+                            .pushReaction(PushReaction.DESTROY)
+
+            ));
+
+    public static final DeferredBlock<Block> VALERIAN_BLOCK = BLOCKS.register("valerian",
+            () -> new FlowerBlock(
+                    MobEffects.NIGHT_VISION,
+                    5.0F,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.PLANT)
+                            .noCollission()
+                            .instabreak()
+                            .sound(SoundType.GRASS)
+                            .offsetType(BlockBehaviour.OffsetType.XZ)
+                            .pushReaction(PushReaction.DESTROY)
+
+            ));
+
+    public static final DeferredBlock<Block> WORMWOOD_BLOCK = BLOCKS.register("wormwood",
+            () -> new FlowerBlock(
+                    MobEffects.NIGHT_VISION,
+                    5.0F,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.PLANT)
+                            .noCollission()
+                            .instabreak()
+                            .sound(SoundType.GRASS)
+                            .offsetType(BlockBehaviour.OffsetType.XZ)
+                            .pushReaction(PushReaction.DESTROY)
+
+            ));
+
+    public static final DeferredBlock<Block> YARROW_BLOCK = BLOCKS.register("yarrow",
+            () -> new FlowerBlock(
+                    MobEffects.NIGHT_VISION,
+                    5.0F,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.PLANT)
+                            .noCollission()
+                            .instabreak()
+                            .sound(SoundType.GRASS)
+                            .offsetType(BlockBehaviour.OffsetType.XZ)
+                            .pushReaction(PushReaction.DESTROY)
+
+            ));
+
+    public static final DeferredBlock<Block> DANDELIONBOOM_BLOCK = BLOCKS.register("dandelionbloom",
+            () -> new FlowerBlock(
+                    MobEffects.NIGHT_VISION,
+                    5.0F,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.PLANT)
+                            .noCollission()
+                            .instabreak()
+                            .sound(SoundType.GRASS)
+                            .offsetType(BlockBehaviour.OffsetType.XZ)
+                            .pushReaction(PushReaction.DESTROY)
+
+            ));
+
+    public static final DeferredBlock<Block> ELDER_BLOCK = BLOCKS.register("elder",
+            () -> new FlowerBlock(
+                    MobEffects.NIGHT_VISION,
+                    5.0F,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.PLANT)
+                            .noCollission()
+                            .instabreak()
+                            .sound(SoundType.GRASS)
+                            .offsetType(BlockBehaviour.OffsetType.XZ)
+                            .pushReaction(PushReaction.DESTROY)
+
+            ));
+
+    public static final DeferredBlock<Block> FENNER_BLOCK = BLOCKS.register("fennel",
+            () -> new FlowerBlock(
+                    MobEffects.NIGHT_VISION,
+                    5.0F,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.PLANT)
+                            .noCollission()
+                            .instabreak()
+                            .sound(SoundType.GRASS)
+                            .offsetType(BlockBehaviour.OffsetType.XZ)
+                            .pushReaction(PushReaction.DESTROY)
+
+            ));
+
+    public static final DeferredBlock<Block> HOPS_BLOCK = BLOCKS.register("hops",
+            () -> new VineBlock(
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.VINE)
+            )
+    );
+
 
     public static final DeferredBlock<Block> MUD_POT = registerBlock("mud_pot",
             () -> new MudPotBlock(BlockBehaviour.Properties.of()
