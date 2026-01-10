@@ -19,6 +19,12 @@ public class ClientModEvents {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.TANSY_BLOCK.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.COMFREY_BLOCK.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.HOREHOUND_BLOCK.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.HYSOP_BLOCK.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.LAVENDER_BLOCK.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.LOVAGE_BLOCK.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.MARIGOLD_BLOCK.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.MINT_BLOCK.get(), RenderType.cutout());
+
         });
     }
 

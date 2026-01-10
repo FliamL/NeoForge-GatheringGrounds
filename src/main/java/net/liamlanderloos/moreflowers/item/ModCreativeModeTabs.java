@@ -25,6 +25,12 @@ public class ModCreativeModeTabs {
                         output.accept((ModBlocks.MUD_POT));
                         output.accept(ModItems.COMFREY);
                         output.accept(ModItems.HOREHOUND);
+                        output.accept(ModItems.HYSOP);
+                        output.accept(ModItems.LAVENDER);
+                        output.accept(ModItems.LOVAGE);
+                        output.accept(ModItems.MARIGOLD);
+                        output.accept(ModItems.MINT);
+
                     })
                     .build());
 

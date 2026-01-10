@@ -32,6 +32,36 @@ public class ModItems {
                     new Item.Properties().food(ModFoodProperties.TANSY) // edible properties
             ));
 
+    public static final DeferredItem<Item> HYSOP = ITEMS.register("hysop",
+            () -> new BlockItem(
+                    ModBlocks.HYSOP_BLOCK.get(), // the block itself
+                    new Item.Properties().food(ModFoodProperties.TANSY) // edible properties
+            ));
+
+    public static final DeferredItem<Item> LAVENDER = ITEMS.register("lavender",
+            () -> new BlockItem(
+                    ModBlocks.LAVENDER_BLOCK.get(), // the block itself
+                    new Item.Properties().food(ModFoodProperties.TANSY) // edible properties
+            ));
+
+    public static final DeferredItem<Item> LOVAGE = ITEMS.register("lovage",
+            () -> new BlockItem(
+                    ModBlocks.LOVAGE_BLOCK.get(), // the block itself
+                    new Item.Properties().food(ModFoodProperties.TANSY) // edible properties
+            ));
+
+    public static final DeferredItem<Item> MARIGOLD = ITEMS.register("marigold",
+            () -> new BlockItem(
+                    ModBlocks.MARIGOLD_BLOCK.get(), // the block itself
+                    new Item.Properties().food(ModFoodProperties.TANSY) // edible properties
+            ));
+
+    public static final DeferredItem<Item> MINT = ITEMS.register("mint",
+            () -> new BlockItem(
+                    ModBlocks.MINT_BLOCK.get(), // the block itself
+                    new Item.Properties().food(ModFoodProperties.TANSY) // edible properties
+            ));
+
     public static final DeferredItem<Item> TANSY_PANCAKE = ITEMS.register("tansy_pancake",
             () -> new Item(new Item.Properties().food(ModFoodProperties.TANSY_PANCAKE)));
 
