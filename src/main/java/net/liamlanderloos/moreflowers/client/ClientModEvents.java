@@ -38,10 +38,8 @@ public class ClientModEvents {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.YARROW_BLOCK.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.DANDELIONBOOM_BLOCK.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.ELDER_BLOCK.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.FENNER_BLOCK.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.FENNEL_BLOCK.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.HOPS_BLOCK.get(), RenderType.cutout());
-
-
         });
     }
 }

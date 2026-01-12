@@ -2,11 +2,8 @@ package net.liamlanderloos.moreflowers.item;
 
 import net.liamlanderloos.moreflowers.MoreFlowers;
 import net.liamlanderloos.moreflowers.block.ModBlocks;
-import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemNameBlockItem;
-import net.minecraft.world.level.block.Blocks;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -148,7 +145,7 @@ public class ModItems {
 
     public static final DeferredItem<Item> FENNEL = ITEMS.register("fennel",
             () -> new BlockItem(
-                    ModBlocks.FENNER_BLOCK.get(), // the block itself
+                    ModBlocks.FENNEL_BLOCK.get(), // the block itself
                     new Item.Properties().food(ModFoodProperties.TANSY) // edible properties
             ));
 
