@@ -14,11 +14,15 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Supplier;
 
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(MoreFlowers.MOD_ID);
+
+    public static final List<DeferredBlock<Block>> CUTOUT_BLOCKS = new ArrayList<>();
 
     public static final DeferredBlock<Block> TANSY_BLOCK = registerHerb("tansy");
     public static final DeferredBlock<Block> COMFREY_BLOCK = registerHerb("comfrey");
@@ -44,11 +48,12 @@ public class ModBlocks {
     public static final DeferredBlock<Block> ELDER_BLOCK = registerHerb("elder");
     public static final DeferredBlock<Block> FENNEL_BLOCK = registerHerb("fennel");
 
-    public static final DeferredBlock<Block> HOPS_BLOCK = BLOCKS.register("hops",
-            () -> new VineBlock(
-                    BlockBehaviour.Properties.ofFullCopy(Blocks.VINE)
-            )
-    );
+    public static final DeferredBlock<Block> HOPS_BLOCK =
+            registerCutout("hops",
+                    () -> new VineBlock(
+                            BlockBehaviour.Properties.ofFullCopy(Blocks.VINE)
+                    )
+            );
 
     public static final DeferredBlock<Block> MUD_POT = registerBlock("mud_pot",
             () -> new MudPotBlock(BlockBehaviour.Properties.of()
@@ -57,13 +62,17 @@ public class ModBlocks {
                     .sound(SoundType.GRASS)));
 
     private static DeferredBlock<Block> registerHerb(String name) {
-        return BLOCKS.register(name, () ->
-                new FlowerBlock(
-                        MobEffects.NIGHT_VISION,
-                        5.0F,
-                        HERB_PROPERTIES
-                )
+        DeferredBlock<Block> block = BLOCKS.register(name, () ->
+                new FlowerBlock(MobEffects.NIGHT_VISION, 5.0F, HERB_PROPERTIES)
         );
+        CUTOUT_BLOCKS.add(block);
+        return block;
+    }
+
+    private static <T extends Block> DeferredBlock<T> registerCutout(String name, Supplier<T> supplier) {
+        DeferredBlock<T> block = BLOCKS.register(name, supplier);
+        CUTOUT_BLOCKS.add((DeferredBlock<Block>) block);
+        return block;
     }
 
     private static final BlockBehaviour.Properties HERB_PROPERTIES =
