@@ -47,6 +47,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> DANDELIONBOOM_BLOCK = registerHerb("dandelionbloom");
     public static final DeferredBlock<Block> ELDER_BLOCK = registerHerb("elder");
     public static final DeferredBlock<Block> FENNEL_BLOCK = registerHerb("fennel");
+    public static final DeferredBlock<Block> CHAMOMILE_BLOCK = registerHerb("chamomile");
 
     public static final DeferredBlock<Block> HOPS_BLOCK =
             registerCutout("hops",

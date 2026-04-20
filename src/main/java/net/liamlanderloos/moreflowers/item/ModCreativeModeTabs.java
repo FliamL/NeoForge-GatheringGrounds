@@ -45,6 +45,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.DANDELIONBLOOM);
                         output.accept(ModItems.ELDER);
                         output.accept(ModItems.FENNEL);
+                        output.accept(ModItems.CHAMOMILE);
+                        output.accept(ModItems.CHAMOMILE_CAKE);
                         output.accept(ModItems.HOPS);
                     })
                     .build());

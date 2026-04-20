@@ -149,6 +149,12 @@ public class ModItems {
                     new Item.Properties().food(ModFoodProperties.TANSY) // edible properties
             ));
 
+    public static final DeferredItem<Item> CHAMOMILE = ITEMS.register("chamomile",
+            () -> new BlockItem(
+                    ModBlocks.CHAMOMILE_BLOCK.get(), // the block itself
+                    new Item.Properties().food(ModFoodProperties.CHAMOMILE) // edible properties
+            ));
+
     public static final DeferredItem<Item> HOPS = ITEMS.register("hops",
             () -> new BlockItem(
                     ModBlocks.HOPS_BLOCK.get(),
@@ -158,6 +164,9 @@ public class ModItems {
 
     public static final DeferredItem<Item> TANSY_PANCAKE = ITEMS.register("tansy_pancake",
             () -> new Item(new Item.Properties().food(ModFoodProperties.TANSY_PANCAKE)));
+
+    public static final DeferredItem<Item> CHAMOMILE_CAKE = ITEMS.register("chamomile_cake",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.CHAMOMILE_CAKE)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

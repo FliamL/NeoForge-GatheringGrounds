@@ -11,10 +11,12 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModEffects {
     public static final DeferredRegister<MobEffect> MOB_EFFECTS =
             DeferredRegister.create(BuiltInRegistries.MOB_EFFECT, MoreFlowers.MOD_ID);
-
-
+    
     public static final Holder<MobEffect> TANSY_EFFECT = MOB_EFFECTS.register("tansy",
             () -> new TansyEffect(MobEffectCategory.NEUTRAL, 0xd4aa39));
+
+    public static final Holder<MobEffect> CHAMOMILE_EFFECT = MOB_EFFECTS.register("chamomile",
+            () -> new ChamomileEffect(MobEffectCategory.BENEFICIAL, 0xffffff));
 
     public static void register(IEventBus eventBus) {
         MOB_EFFECTS.register(eventBus);
