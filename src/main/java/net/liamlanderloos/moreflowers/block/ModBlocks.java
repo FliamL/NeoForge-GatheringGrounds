@@ -1,6 +1,7 @@
 package net.liamlanderloos.moreflowers.block;
 
 import net.liamlanderloos.moreflowers.MoreFlowers;
+import net.liamlanderloos.moreflowers.block.custom.MarigoldBlock;
 import net.liamlanderloos.moreflowers.block.custom.MudPotBlock;
 import net.liamlanderloos.moreflowers.item.ModItems;
 import net.minecraft.world.effect.MobEffects;
@@ -24,13 +25,23 @@ public class ModBlocks {
 
     public static final List<DeferredBlock<Block>> CUTOUT_BLOCKS = new ArrayList<>();
 
+    private static final BlockBehaviour.Properties HERB_PROPERTIES =
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.PLANT)
+                    .noCollission()
+                    .instabreak()
+                    .sound(SoundType.GRASS)
+                    .offsetType(BlockBehaviour.OffsetType.XZ)
+                    .pushReaction(PushReaction.DESTROY);
+
     public static final DeferredBlock<Block> TANSY_BLOCK = registerHerb("tansy");
     public static final DeferredBlock<Block> COMFREY_BLOCK = registerHerb("comfrey");
     public static final DeferredBlock<Block> HOREHOUND_BLOCK = registerHerb("horehound");
     public static final DeferredBlock<Block> HYSOP_BLOCK = registerHerb("hysop");
     public static final DeferredBlock<Block> LAVENDER_BLOCK = registerHerb("lavender");
     public static final DeferredBlock<Block> LOVAGE_BLOCK = registerHerb("lovage");
-    public static final DeferredBlock<Block> MARIGOLD_BLOCK = registerHerb("marigold");
+    public static final DeferredBlock<Block> MARIGOLD_BLOCK = registerCustomHerb("marigold",
+            () -> new MarigoldBlock(MobEffects.REGENERATION, 5.0F, HERB_PROPERTIES));
     public static final DeferredBlock<Block> MINT_BLOCK = registerHerb("mint");
     public static final DeferredBlock<Block> NETTLE_BLOCK = registerHerb("nettle");
     public static final DeferredBlock<Block> PEPPERMINT_BLOCK = registerHerb("peppermint");
@@ -56,6 +67,7 @@ public class ModBlocks {
                     )
             );
 
+
     public static final DeferredBlock<Block> MUD_POT = registerBlock("mud_pot",
             () -> new MudPotBlock(BlockBehaviour.Properties.of()
                     .strength(0.0F)
@@ -70,21 +82,17 @@ public class ModBlocks {
         return block;
     }
 
+    private static DeferredBlock<Block> registerCustomHerb(String name, Supplier<Block> supplier) {
+        DeferredBlock<Block> block = BLOCKS.register(name, supplier);
+        CUTOUT_BLOCKS.add(block);
+        return block;
+    }
+
     private static <T extends Block> DeferredBlock<T> registerCutout(String name, Supplier<T> supplier) {
         DeferredBlock<T> block = BLOCKS.register(name, supplier);
         CUTOUT_BLOCKS.add((DeferredBlock<Block>) block);
         return block;
     }
-
-    private static final BlockBehaviour.Properties HERB_PROPERTIES =
-            BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.PLANT)
-                    .noCollission()
-                    .instabreak()
-                    .sound(SoundType.GRASS)
-                    .offsetType(BlockBehaviour.OffsetType.XZ)
-                    .pushReaction(PushReaction.DESTROY);
-
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> supplier) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, supplier);

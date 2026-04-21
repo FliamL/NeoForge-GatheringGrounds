@@ -17,7 +17,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 public class MudPotBlock extends Block {
     public static final IntegerProperty POWER = BlockStateProperties.POWER;
     private static final VoxelShape SHAPE = Block.box(5, 0, 5, 11, 6, 11);
-    private static final int TICK_RATE = 20; // 1 second in ticks
+    private static final int TICK_RATE = 100; // 5 seconds in ticks (20 ticks/sec)
 
     public MudPotBlock(Properties properties) {
         super(properties);
@@ -59,11 +59,7 @@ public class MudPotBlock extends Block {
     @Override
     public void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         // Generate a random power between 0 and 15
-        // Using two random calls and taking the minimum can bias it towards lower values
-        int r1 = random.nextInt(16);
-        int r2 = random.nextInt(16);
-        int newPower = Math.min(r1, r2);
-
+        int newPower = random.nextInt(16);
         level.setBlock(pos, state.setValue(POWER, newPower), 3);
         
         // Schedule the next random update
