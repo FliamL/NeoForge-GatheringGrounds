@@ -1,7 +1,20 @@
 {
   "variants": {
-    "": {
-      "model": "moreflowers:block/mud_pot"
-    }
+    "power=0": { "model": "moreflowers:block/mud_pot" },
+    "power=1": { "model": "moreflowers:block/mud_pot" },
+    "power=2": { "model": "moreflowers:block/mud_pot" },
+    "power=3": { "model": "moreflowers:block/mud_pot" },
+    "power=4": { "model": "moreflowers:block/mud_pot" },
+    "power=5": { "model": "moreflowers:block/mud_pot" },
+    "power=6": { "model": "moreflowers:block/mud_pot" },
+    "power=7": { "model": "moreflowers:block/mud_pot" },
+    "power=8": { "model": "moreflowers:block/mud_pot" },
+    "power=9": { "model": "moreflowers:block/mud_pot" },
+    "power=10": { "model": "moreflowers:block/mud_pot" },
+    "power=11": { "model": "moreflowers:block/mud_pot" },
+    "power=12": { "model": "moreflowers:block/mud_pot" },
+    "power=13": { "model": "moreflowers:block/mud_pot" },
+    "power=14": { "model": "moreflowers:block/mud_pot" },
+    "power=15": { "model": "moreflowers:block/mud_pot" }
   }
 }
