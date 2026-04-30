@@ -47,21 +47,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.FENNEL);
                         output.accept(ModItems.CHAMOMILE);
                         output.accept(ModItems.CHAMOMILE_CAKE);
+                        output.accept(ModItems.CUP);
                         output.accept(ModItems.HOPS);
                     })
                     .build());
-
-//    public static final Supplier<CreativeModeTab> FLOWER_BLOCKS_TAB = CREATIVE_MODE_TAB.register("flower_blocks_tab",
-//            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.TANSY.get()))
-//                    .withTabsBefore(ResourceLocation.fromNamespaceAndPath(MoreFlowers.MOD_ID, "flower_items_tab"))
-//                    .title(Component.translatable("creativetab.moreflowers.flower_blocks"))
-//                    .displayItems((itemDisplayParameters, output) -> {
-//                        output.accept(ModItems.TANSY);
-//                        output.accept(ModItems.TANSY_PANCAKE);
-//
-//                    })
-//                    .build());
-
 
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TAB.register(eventBus);

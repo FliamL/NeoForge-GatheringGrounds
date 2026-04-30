@@ -33,4 +33,12 @@ public class ModFoodProperties {
             .saturationModifier(0.5f)
             .effect(() -> new MobEffectInstance(ModEffects.CHAMOMILE_EFFECT, 1), 1f)
             .build();
+
+    public static final FoodProperties CHAMOMILE_TEA = new FoodProperties
+            .Builder()
+            .nutrition(1)
+            .saturationModifier(0.1f)
+            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 100), 1f) // 5 seconds of Regeneration
+            .alwaysEdible()
+            .build();
 }
