@@ -5,6 +5,7 @@ import net.liamlanderloos.moreflowers.effect.ModEffects;
 import net.liamlanderloos.moreflowers.event.PlayerDeathHandler;
 import net.liamlanderloos.moreflowers.item.ModCreativeModeTabs;
 import net.liamlanderloos.moreflowers.item.ModItems;
+import net.liamlanderloos.moreflowers.potion.ModPotions;
 import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
@@ -32,10 +33,6 @@ public class MoreFlowers {
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public MoreFlowers(IEventBus modEventBus, ModContainer modContainer) {
-        // Register the commonSetup method for modloading
-        modEventBus.addListener(this::commonSetup);
-
-
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
@@ -47,16 +44,13 @@ public class MoreFlowers {
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
         ModEffects.register(modEventBus);
+        ModPotions.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
-    }
-
-    private void commonSetup(FMLCommonSetupEvent event) {
-
     }
 
     // Add the example block item to the building blocks tab

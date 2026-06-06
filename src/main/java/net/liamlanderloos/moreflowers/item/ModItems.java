@@ -169,7 +169,7 @@ public class ModItems {
             () -> new CupOfWaterItem(new Item.Properties().craftRemainder(ModItems.CUP.get()).stacksTo(1)));
 
     public static final DeferredItem<Item> CHAMOMILE_TEA = ITEMS.register("chamomile_tea",
-            () -> new ChamomileTeaItem(new Item.Properties().craftRemainder(ModItems.CUP.get()).stacksTo(1).food(ModFoodProperties.CHAMOMILE_TEA)));
+            () -> new ChamomilleTeaItem(new Item.Properties()));
 
     public static final DeferredItem<Item> TANSY_PANCAKE = ITEMS.register("tansy_pancake",
             () -> new Item(new Item.Properties().food(ModFoodProperties.TANSY_PANCAKE)));

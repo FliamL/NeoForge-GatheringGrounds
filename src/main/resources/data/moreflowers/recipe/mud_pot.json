@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " I ",
+    " M ",
+    " P "
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_nugget"
+    },
+    "M": {
+      "item": "minecraft:mud"
+    },
+    "P": {
+      "item": "minecraft:flower_pot"
+    }
+  },
+  "result": {
+    "id": "moreflowers:mud_pot",
+    "count": 1
+  }
+}

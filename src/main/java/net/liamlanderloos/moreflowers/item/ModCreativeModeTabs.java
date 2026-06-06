@@ -49,6 +49,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.CHAMOMILE_CAKE);
                         output.accept(ModItems.CUP);
                         output.accept(ModItems.HOPS);
+                        output.accept(ModItems.CUP_OF_WATER);
                     })
                     .build());
 

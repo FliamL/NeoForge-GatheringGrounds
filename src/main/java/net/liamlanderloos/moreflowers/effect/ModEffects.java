@@ -16,7 +16,7 @@ public class ModEffects {
             () -> new TansyEffect(MobEffectCategory.NEUTRAL, 0xd4aa39));
 
     public static final Holder<MobEffect> CHAMOMILE_EFFECT = MOB_EFFECTS.register("chamomile",
-            () -> new ChamomileEffect(MobEffectCategory.BENEFICIAL, 0xffffff));
+            () -> new ChamomileEffect(MobEffectCategory.NEUTRAL, 0xffffff));
 
     public static void register(IEventBus eventBus) {
         MOB_EFFECTS.register(eventBus);

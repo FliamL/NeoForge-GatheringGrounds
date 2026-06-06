@@ -6,36 +6,31 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 
 public class ModFoodProperties {
-    public static final FoodProperties TANSY = new FoodProperties
-            .Builder()
+    public static final FoodProperties TANSY = new FoodProperties.Builder()
             .nutrition(2)
             .saturationModifier(0.25f)
             .effect(() -> new MobEffectInstance(ModEffects.TANSY_EFFECT, 100), 1f)
             .build();
 
-    public static final FoodProperties CHAMOMILE = new FoodProperties
-            .Builder()
+    public static final FoodProperties CHAMOMILE = new FoodProperties.Builder()
             .nutrition(2)
             .saturationModifier(0.25f)
             .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 200, 1), 1f)
             .build();
 
-    public static final FoodProperties TANSY_PANCAKE = new FoodProperties
-            .Builder()
+    public static final FoodProperties TANSY_PANCAKE = new FoodProperties.Builder()
             .nutrition(3)
             .saturationModifier(0.25f)
             .effect(() -> new MobEffectInstance(ModEffects.TANSY_EFFECT, 400), 1f)
             .build();
 
-    public static final FoodProperties CHAMOMILE_CAKE = new FoodProperties
-            .Builder()
+    public static final FoodProperties CHAMOMILE_CAKE = new FoodProperties.Builder()
             .nutrition(5)
             .saturationModifier(0.5f)
             .effect(() -> new MobEffectInstance(ModEffects.CHAMOMILE_EFFECT, 1), 1f)
             .build();
 
-    public static final FoodProperties CHAMOMILE_TEA = new FoodProperties
-            .Builder()
+    public static final FoodProperties CHAMOMILE_TEA = new FoodProperties.Builder()
             .nutrition(1)
             .saturationModifier(0.1f)
             .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 100), 1f) // 5 seconds of Regeneration

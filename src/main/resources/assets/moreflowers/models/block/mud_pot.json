@@ -1,8 +1,8 @@
 {
   "ambientocclusion": false,
   "textures": {
-    "particle": "block/mud_pot",
-    "flowerpot": "block/mud_pot",
+    "particle": "moreflowers:block/mud_pot",
+    "flowerpot": "moreflowers:block/mud_pot",
     "dirt": "block/dirt"
   },
   "elements": [
