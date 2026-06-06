@@ -6,10 +6,13 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 
-public class ChamomilleTeaItem extends PotionItem {
+public class ChamomilleTeaItem extends Item {
     public ChamomilleTeaItem(Properties pProperties) {
-        super(pProperties.food(new FoodProperties.Builder().alwaysEdible().effect(() -> new MobEffectInstance(ModEffects.CHAMOMILE_EFFECT, 1200, 0), 1.0F).build()).craftRemainder(ModItems.CUP.get()).stacksTo(1));
+        super(pProperties.food(new FoodProperties.Builder().alwaysEdible().effect(() ->
+                new MobEffectInstance(ModEffects.CHAMOMILE_EFFECT, 1200, 0), 1.0F).build())
+                .craftRemainder(ModItems.CUP.get()).stacksTo(1));
     }
 
     @Override
@@ -20,11 +23,5 @@ public class ChamomilleTeaItem extends PotionItem {
     @Override
     public int getUseDuration(ItemStack pStack, LivingEntity pLivingEntity) {
         return 32;
-    }
-
-    @Override
-    public ItemStack finishUsingItem(ItemStack pStack, Level pLevel, LivingEntity pLivingEntity) {
-        super.finishUsingItem(pStack, pLevel, pLivingEntity);
-        return ItemUtils.createFilledResult(pStack, pLivingEntity instanceof net.minecraft.world.entity.player.Player p ? p : null, new ItemStack(ModItems.CUP.get()));
     }
 }

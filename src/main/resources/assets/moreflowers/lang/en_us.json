@@ -4,8 +4,8 @@
   "item.moreflowers.chamomile": "Chamomile",
   "item.moreflowers.chamomile_cake": "Chamomile Cake",
   "item.moreflowers.cup": "Cup",
-  "item.moreflowers.cup_of_water_potion": "Cup of Water",
-  "item.moreflowers.chamomile_tea": "Chamomile Tea",
+  "item.minecraft.potion.effect.chamomile_tea": "Chamomile Tea",
+  "item.minecraft.potion.effect.cup_of_water_potion": "Water Cup",
 
   "creativetab.moreflowers.flower_items": "Flower Items",
   "creativetab.moreflowers.flower_blocks": "Flower Blocks",
