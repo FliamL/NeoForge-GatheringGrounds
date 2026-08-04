@@ -12,6 +12,17 @@ public class ModFoodProperties {
             .effect(() -> new MobEffectInstance(ModEffects.TANSY_EFFECT, 100), 1f)
             .build();
 
+    public static final FoodProperties ROZENBOTTEL = new FoodProperties.Builder()
+            .nutrition(2)
+            .saturationModifier(0.25f)
+            .build();
+
+    public static final FoodProperties HOREHOUND = new FoodProperties.Builder()
+            .nutrition(2)
+            .saturationModifier(0.25f)
+            .effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 1200, 1), 1f)
+            .build();
+
     public static final FoodProperties CHAMOMILE = new FoodProperties.Builder()
             .nutrition(2)
             .saturationModifier(0.25f)

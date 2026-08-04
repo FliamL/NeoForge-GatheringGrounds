@@ -72,7 +72,7 @@ public class CupItem extends Item {
                         );
                         level.gameEvent(player, GameEvent.FLUID_PICKUP, blockpos);
                         return InteractionResultHolder.sidedSuccess(
-                                this.turnBottleIntoItem(itemstack, player, PotionContents.createItemStack(Items.POTION, ModPotions.CUP_OF_WATER_POTION)), level.isClientSide()
+                                this.turnBottleIntoItem(itemstack, player, PotionContents.createItemStack(ModItems.CUP_OF_WATER.get(), ModPotions.CUP_OF_WATER_POTION)), level.isClientSide()
                         );
                     }
                 }

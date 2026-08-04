@@ -26,7 +26,7 @@ public class ModItems {
     public static final DeferredItem<Item> HOREHOUND = ITEMS.register("horehound",
             () -> new BlockItem(
                     ModBlocks.HOREHOUND_BLOCK.get(), // the block itself
-                    new Item.Properties().food(ModFoodProperties.TANSY) // edible properties
+                    new Item.Properties().food(ModFoodProperties.HOREHOUND) // edible properties
             ));
 
     public static final DeferredItem<Item> HYSOP = ITEMS.register("hysop",
@@ -84,9 +84,9 @@ public class ModItems {
             ));
 
     public static final DeferredItem<Item> ROZENBOTTEL = ITEMS.register("rozenbottel",
-            () -> new BlockItem(
+            () -> new RozenbottelItem(
                     ModBlocks.ROZENBOTTEL_BLOCK.get(), // the block itself
-                    new Item.Properties().food(ModFoodProperties.TANSY) // edible properties
+                    new Item.Properties().food(ModFoodProperties.ROZENBOTTEL) // edible properties
             ));
 
     public static final DeferredItem<Item> RUE = ITEMS.register("rue",
@@ -162,6 +162,9 @@ public class ModItems {
             )
     );
 
+    public static final DeferredItem<Item> HOPS_SEED = ITEMS.register("hops_seed",
+            () -> new Item(new Item.Properties()));
+
     public static final DeferredItem<Item> CUP = ITEMS.register("cup",
             () -> new CupItem(new Item.Properties()));
 
@@ -170,6 +173,9 @@ public class ModItems {
 
     public static final DeferredItem<Item> CHAMOMILE_TEA = ITEMS.register("chamomile_tea",
             () -> new ChamomilleTeaItem(new Item.Properties()));
+
+    public static final DeferredItem<Item> BEER = ITEMS.register("beer",
+            () -> new BeerItem(new Item.Properties()));
 
     public static final DeferredItem<Item> TANSY_PANCAKE = ITEMS.register("tansy_pancake",
             () -> new Item(new Item.Properties().food(ModFoodProperties.TANSY_PANCAKE)));
