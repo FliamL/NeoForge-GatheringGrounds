@@ -12,6 +12,12 @@ public class ModFoodProperties {
             .effect(() -> new MobEffectInstance(ModEffects.TANSY_EFFECT, 100), 1f)
             .build();
 
+    public static final FoodProperties COMFREY = new FoodProperties.Builder()
+            .nutrition(2)
+            .saturationModifier(0.25f)
+            .effect(() -> new MobEffectInstance(ModEffects.COMFREY_EFFECT, 200), 1f)
+            .build();
+
     public static final FoodProperties ROZENBOTTEL = new FoodProperties.Builder()
             .nutrition(2)
             .saturationModifier(0.25f)

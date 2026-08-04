@@ -18,6 +18,9 @@ public class ModEffects {
     public static final Holder<MobEffect> CHAMOMILE_EFFECT = MOB_EFFECTS.register("chamomile",
             () -> new ChamomileEffect(MobEffectCategory.NEUTRAL, 0xffffff));
 
+    public static final Holder<MobEffect> COMFREY_EFFECT = MOB_EFFECTS.register("comfrey",
+            () -> new ComfreyEffect(MobEffectCategory.BENEFICIAL, 0x4a7c2f));
+
     public static void register(IEventBus eventBus) {
         MOB_EFFECTS.register(eventBus);
     }

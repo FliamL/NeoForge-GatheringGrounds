@@ -20,7 +20,7 @@ public class ModItems {
     public static final DeferredItem<Item> COMFREY = ITEMS.register("comfrey",
             () -> new BlockItem(
                     ModBlocks.COMFREY_BLOCK.get(), // the block itself
-                    new Item.Properties().food(ModFoodProperties.TANSY) // edible properties
+                    new Item.Properties().food(ModFoodProperties.COMFREY) // edible properties
             ));
 
     public static final DeferredItem<Item> HOREHOUND = ITEMS.register("horehound",
