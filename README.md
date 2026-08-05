@@ -7,6 +7,8 @@ Direction shifts from dyeing systems toward magical systems rooted in witchcraft
 Minecraft is the context and medium, as a shared epistemic space. It enables the construction and testing of systems that foreground relation over extraction. Scientific knowledge is often extractive; witchcraft models correspondence, care, and reciprocity.
 The project uses Minecraft to model magical systems as alternative epistemologies, translations between humans, nonhumans, and materials. It resists commodification and operates within it. The work acknowledges this contradiction as structural: an experiment that exposes and inhabits the tension between relational knowledge and market logic.
 
+All plants are pollinateable by bees and have a loot table when broken in survival
+
 # Plants
 
 | Plant | Description |
