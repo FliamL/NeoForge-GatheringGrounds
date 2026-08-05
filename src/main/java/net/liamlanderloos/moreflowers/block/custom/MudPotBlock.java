@@ -55,9 +55,9 @@ public class MudPotBlock extends Block {
 
     @Override
     public void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean isMoving) {
-        if (!level.isClientSide) {
+        if (!level.isClientSide()) {
             // Schedule the first pulse after a random delay
-            scheduleNextPulse(level, pos, level.random);
+            scheduleNextPulse(level, pos, level.getRandom());
         }
     }
 

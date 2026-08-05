@@ -8,12 +8,17 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.game.ClientboundSoundPacket;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.level.Level;
 import net.neoforged.bus.api.SubscribeEvent;
+
+import java.util.Set;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 
@@ -35,17 +40,22 @@ public class PlayerDeathHandler {
         event.setCanceled(true);
         player.setHealth(player.getMaxHealth());
 
-        BlockPos respawnPos = player.getRespawnPosition();
-        BlockPos fallbackPos = player.server.overworld().getSharedSpawnPos();
+        MinecraftServer server = player.level().getServer();
+        ServerPlayer.RespawnConfig respawnConfig = player.getRespawnConfig();
+        BlockPos respawnPos = respawnConfig != null ? respawnConfig.respawnData().pos() : null;
+        BlockPos fallbackPos = server.overworld().getLevelData().getRespawnData().pos();
         BlockPos targetPos = respawnPos != null ? respawnPos : fallbackPos;
+        ResourceKey<Level> respawnDimension = ServerPlayer.RespawnConfig.getDimensionOrDefault(respawnConfig);
 
         player.teleportTo(
-                player.server.getLevel(player.getRespawnDimension()),
+                server.getLevel(respawnDimension),
                 targetPos.getX() + 0.5,
                 targetPos.getY(),
                 targetPos.getZ() + 0.5,
+                Set.of(),
                 player.getYRot(),
-                player.getXRot()
+                player.getXRot(),
+                true
         );
 
         Holder<SoundEvent> totemSound = BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.TOTEM_USE);

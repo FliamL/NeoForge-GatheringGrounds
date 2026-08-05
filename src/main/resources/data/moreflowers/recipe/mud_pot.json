@@ -6,15 +6,9 @@
     " P "
   ],
   "key": {
-    "I": {
-      "item": "minecraft:iron_nugget"
-    },
-    "M": {
-      "item": "minecraft:mud"
-    },
-    "P": {
-      "item": "minecraft:flower_pot"
-    }
+    "I": "minecraft:iron_nugget",
+    "M": "minecraft:mud",
+    "P": "minecraft:flower_pot"
   },
   "result": {
     "id": "moreflowers:mud_pot",

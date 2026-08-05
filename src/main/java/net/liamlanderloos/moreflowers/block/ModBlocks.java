@@ -21,6 +21,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
 import java.util.function.Supplier;
 
 public class ModBlocks {
@@ -29,14 +30,15 @@ public class ModBlocks {
 
     public static final List<DeferredBlock<Block>> CUTOUT_BLOCKS = new ArrayList<>();
 
-    private static final BlockBehaviour.Properties HERB_PROPERTIES =
-            BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.PLANT)
-                    .noCollission()
-                    .instabreak()
-                    .sound(SoundType.GRASS)
-                    .offsetType(BlockBehaviour.OffsetType.XZ)
-                    .pushReaction(PushReaction.DESTROY);
+    private static BlockBehaviour.Properties herbProperties() {
+        return BlockBehaviour.Properties.of()
+                .mapColor(MapColor.PLANT)
+                .noCollision()
+                .instabreak()
+                .sound(SoundType.GRASS)
+                .offsetType(BlockBehaviour.OffsetType.XZ)
+                .pushReaction(PushReaction.DESTROY);
+    }
 
     public static final DeferredBlock<Block> TANSY_BLOCK = registerHerb("tansy");
     public static final DeferredBlock<Block> COMFREY_BLOCK = registerHerb("comfrey");
@@ -45,7 +47,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> LAVENDER_BLOCK = registerHerb("lavender");
     public static final DeferredBlock<Block> LOVAGE_BLOCK = registerHerb("lovage");
     public static final DeferredBlock<Block> MARIGOLD_BLOCK = registerCustomHerb("marigold",
-            () -> new MarigoldBlock(MobEffects.REGENERATION, 5.0F, HERB_PROPERTIES));
+            properties -> new MarigoldBlock(MobEffects.REGENERATION, 5.0F, properties));
     public static final DeferredBlock<Block> MINT_BLOCK = registerHerb("mint");
     public static final DeferredBlock<Block> NETTLE_BLOCK = registerHerb("nettle");
     public static final DeferredBlock<Block> PEPPERMINT_BLOCK = registerHerb("peppermint");
@@ -65,47 +67,44 @@ public class ModBlocks {
     public static final DeferredBlock<Block> CHAMOMILE_BLOCK = registerHerb("chamomile");
 
     public static final DeferredBlock<Block> HOPS_BLOCK =
-            registerCutout("hops",
-                    () -> new VineBlock(
-                            BlockBehaviour.Properties.ofFullCopy(Blocks.VINE)
-                    )
-            );
+            registerCutout("hops", VineBlock::new,
+                    () -> BlockBehaviour.Properties.ofFullCopy(Blocks.VINE));
 
 
-    public static final DeferredBlock<Block> MUD_POT = registerBlock("mud_pot",
-            () -> new MudPotBlock(BlockBehaviour.Properties.of()
+    public static final DeferredBlock<Block> MUD_POT = registerBlock("mud_pot", MudPotBlock::new,
+            () -> BlockBehaviour.Properties.of()
                     .strength(0.0F)
                     .noOcclusion()
-                    .sound(SoundType.GRASS)));
+                    .sound(SoundType.GRASS));
 
     private static DeferredBlock<Block> registerHerb(String name) {
-        DeferredBlock<Block> block = BLOCKS.register(name, () ->
-                new FlowerBlock(MobEffects.NIGHT_VISION, 5.0F, HERB_PROPERTIES)
-        );
+        DeferredBlock<Block> block = BLOCKS.registerBlock(name,
+                properties -> new FlowerBlock(MobEffects.NIGHT_VISION, 5.0F, properties),
+                ModBlocks::herbProperties);
         CUTOUT_BLOCKS.add(block);
         return block;
     }
 
-    private static DeferredBlock<Block> registerCustomHerb(String name, Supplier<Block> supplier) {
-        DeferredBlock<Block> block = BLOCKS.register(name, supplier);
+    private static DeferredBlock<Block> registerCustomHerb(String name, Function<BlockBehaviour.Properties, Block> factory) {
+        DeferredBlock<Block> block = BLOCKS.registerBlock(name, factory, ModBlocks::herbProperties);
         CUTOUT_BLOCKS.add(block);
         return block;
     }
 
-    private static DeferredBlock<Block> registerCutout(String name, Supplier<Block> supplier) {
-        DeferredBlock<Block> block = BLOCKS.register(name, supplier);
+    private static DeferredBlock<Block> registerCutout(String name, Function<BlockBehaviour.Properties, Block> factory, Supplier<BlockBehaviour.Properties> properties) {
+        DeferredBlock<Block> block = BLOCKS.registerBlock(name, factory, properties);
         CUTOUT_BLOCKS.add(block);
         return block;
     }
 
-    private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> supplier) {
-        DeferredBlock<T> toReturn = BLOCKS.register(name, supplier);
+    private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> factory, Supplier<BlockBehaviour.Properties> properties) {
+        DeferredBlock<T> toReturn = BLOCKS.registerBlock(name, factory, properties);
         registerBlockitem(name, toReturn);
         return toReturn;
     }
 
     private static <T extends Block> void registerBlockitem(String name, DeferredBlock<T> block){
-        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+        ModItems.ITEMS.registerItem(name, properties -> new BlockItem(block.get(), properties), Item.Properties::new);
     }
 
     public static void register(IEventBus eventBus) {

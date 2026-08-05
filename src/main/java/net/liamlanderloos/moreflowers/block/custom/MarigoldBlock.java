@@ -24,7 +24,7 @@ public class MarigoldBlock extends FlowerBlock {
 
     @Override
     public void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean isMoving) {
-        if (!level.isClientSide) {
+        if (!level.isClientSide()) {
             level.scheduleTick(pos, this, 1);
         }
     }
@@ -55,8 +55,7 @@ public class MarigoldBlock extends FlowerBlock {
 
                 // Apply a physical push
                 mob.setDeltaMovement(repelDir.scale(0.7));
-                mob.hasImpulse = true;
-                
+
                 if (mob instanceof Phantom phantom) {
                     // Phantoms use a special movement controller for flying
                     // We can try to force them to fly upwards and away

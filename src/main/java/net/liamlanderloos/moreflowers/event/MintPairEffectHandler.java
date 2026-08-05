@@ -20,7 +20,7 @@ import java.util.UUID;
  * Mint only grants Luck II when two players eat it together: within 5 blocks of each other and within 5 seconds.
  * Eating it alone (or too far apart / too late) does nothing.
  */
-@EventBusSubscriber(modid = MoreFlowers.MOD_ID, bus = EventBusSubscriber.Bus.GAME)
+@EventBusSubscriber(modid = MoreFlowers.MOD_ID)
 public class MintPairEffectHandler {
 
     private static final double RADIUS = 5.0;
@@ -59,7 +59,7 @@ public class MintPairEffectHandler {
         if (partnerId != null) {
             RECENT_MINT_EATERS.remove(partnerId);
             player.addEffect(new MobEffectInstance(MobEffects.LUCK, BUFF_DURATION_TICKS, 1));
-            ServerPlayer partner = player.getServer().getPlayerList().getPlayer(partnerId);
+            ServerPlayer partner = player.level().getServer().getPlayerList().getPlayer(partnerId);
             if (partner != null) {
                 partner.addEffect(new MobEffectInstance(MobEffects.LUCK, BUFF_DURATION_TICKS, 1));
             }

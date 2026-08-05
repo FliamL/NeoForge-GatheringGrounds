@@ -2,10 +2,10 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    { "item": "minecraft:egg" },
-    { "item": "minecraft:wheat" },
-    { "item": "moreflowers:tansy" },
-    { "item": "minecraft:milk_bucket" }
+    "minecraft:egg",
+    "minecraft:wheat",
+    "moreflowers:tansy",
+    "minecraft:milk_bucket"
   ],
   "result": {
     "count": 1,

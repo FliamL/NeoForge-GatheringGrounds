@@ -1,7 +1,7 @@
 package net.liamlanderloos.moreflowers.item;
 
 import net.liamlanderloos.moreflowers.potion.ModPotions;
-import net.minecraft.advancements.CriteriaTriggers;
+import net.minecraft.advancements.triggers.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
@@ -9,7 +9,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
 import net.minecraft.world.entity.player.Player;
@@ -36,7 +36,7 @@ public class CupItem extends Item {
      * Called to trigger the item's "innate" right click behavior. To handle when this item is used on a Block, see .
      */
     @Override
-    public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
+    public InteractionResult use(Level level, Player player, InteractionHand hand) {
         List<AreaEffectCloud> list = level.getEntitiesOfClass(
                 AreaEffectCloud.class,
                 player.getBoundingBox().inflate(2.0),
@@ -52,18 +52,18 @@ public class CupItem extends Item {
                 CriteriaTriggers.PLAYER_INTERACTED_WITH_ENTITY.trigger(serverplayer, itemstack, areaeffectcloud);
             }
 
-            return InteractionResultHolder.sidedSuccess(
-                    this.turnBottleIntoItem(itemstack, player, new ItemStack(Items.DRAGON_BREATH)), level.isClientSide()
+            return InteractionResult.SUCCESS.heldItemTransformedTo(
+                    this.turnBottleIntoItem(itemstack, player, new ItemStack(Items.DRAGON_BREATH))
             );
         } else {
             BlockHitResult blockhitresult = getPlayerPOVHitResult(level, player, ClipContext.Fluid.SOURCE_ONLY);
             if (blockhitresult.getType() == HitResult.Type.MISS) {
-                return InteractionResultHolder.pass(itemstack);
+                return InteractionResult.PASS;
             } else {
                 if (blockhitresult.getType() == HitResult.Type.BLOCK) {
                     BlockPos blockpos = blockhitresult.getBlockPos();
                     if (!level.mayInteract(player, blockpos)) {
-                        return InteractionResultHolder.pass(itemstack);
+                        return InteractionResult.PASS;
                     }
 
                     if (level.getFluidState(blockpos).is(FluidTags.WATER)) {
@@ -71,13 +71,13 @@ public class CupItem extends Item {
                                 player, player.getX(), player.getY(), player.getZ(), SoundEvents.BOTTLE_FILL, SoundSource.NEUTRAL, 1.0F, 1.0F
                         );
                         level.gameEvent(player, GameEvent.FLUID_PICKUP, blockpos);
-                        return InteractionResultHolder.sidedSuccess(
-                                this.turnBottleIntoItem(itemstack, player, PotionContents.createItemStack(ModItems.CUP_OF_WATER.get(), ModPotions.CUP_OF_WATER_POTION)), level.isClientSide()
+                        return InteractionResult.SUCCESS.heldItemTransformedTo(
+                                this.turnBottleIntoItem(itemstack, player, PotionContents.createItemStack(ModItems.CUP_OF_WATER.get(), ModPotions.CUP_OF_WATER_POTION))
                         );
                     }
                 }
 
-                return InteractionResultHolder.pass(itemstack);
+                return InteractionResult.PASS;
             }
         }
     }

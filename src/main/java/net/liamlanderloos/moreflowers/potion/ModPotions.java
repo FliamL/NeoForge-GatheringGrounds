@@ -11,7 +11,7 @@ public class ModPotions {
     public static final DeferredRegister<Potion> POTIONS = DeferredRegister.create(BuiltInRegistries.POTION, MoreFlowers.MOD_ID);
 
     public static final Holder<Potion> CUP_OF_WATER_POTION = POTIONS.register("cup_of_water_potion",
-            () -> new Potion());
+            () -> new Potion("cup_of_water_potion"));
 
     public static void register(IEventBus eventBus){
         POTIONS.register(eventBus);

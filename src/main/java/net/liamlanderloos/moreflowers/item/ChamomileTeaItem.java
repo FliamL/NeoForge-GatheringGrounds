@@ -6,20 +6,29 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.item.ItemUseAnimation;
+import net.minecraft.world.item.component.Consumables;
+import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
+
+import java.util.List;
 
 public class ChamomileTeaItem extends Item {
     public ChamomileTeaItem(Properties pProperties) {
-        super(pProperties.food(new FoodProperties.Builder().alwaysEdible()
-                        .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 600, 1), 1.0F)
-                        .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 600, 1), 1.0F)
-                        .build())
+        super(pProperties.food(
+                        new FoodProperties.Builder().alwaysEdible().build(),
+                        Consumables.defaultDrink()
+                                .onConsume(new ApplyStatusEffectsConsumeEffect(List.of(
+                                        new MobEffectInstance(MobEffects.STRENGTH, 600, 1),
+                                        new MobEffectInstance(MobEffects.SPEED, 600, 1)
+                                )))
+                                .build()
+                )
                 .craftRemainder(ModItems.CUP.get()).stacksTo(1));
     }
 
     @Override
-    public UseAnim getUseAnimation(ItemStack pStack) {
-        return UseAnim.DRINK;
+    public ItemUseAnimation getUseAnimation(ItemStack pStack) {
+        return ItemUseAnimation.DRINK;
     }
 
     @Override
