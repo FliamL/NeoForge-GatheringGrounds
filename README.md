@@ -55,3 +55,9 @@ All plants are pollinateable by bees and have a loot table when broken in surviv
 | **Marigold** | Repels hostile mobs within a 7-block radius. Mobs are pushed away, lose their attack target, and Phantoms will flee. |
 | **Mud Pot** | Acts as a self-powered redstone clock, automatically emitting a pulse every 5–10 seconds after being placed. Crafted using **Mud**, an **Iron Nugget**, and a **Flower Pot**. |
 | **Hops** | A climbable vine that is also used as an ingredient for brewing **Beer**. |
+
+
+<img width="1500" height="962" alt="ThV1WbM" src="https://github.com/user-attachments/assets/bd61f16f-7269-492d-899c-18a83435b4fe" />
+<img width="1207" height="1017" alt="39tmQma" src="https://github.com/user-attachments/assets/d9a5b358-fd4c-46d8-94f3-e6528570843c" />
+<img width="1802" height="1363" alt="mIRzvpw" src="https://github.com/user-attachments/assets/d250e525-4778-474e-8d6c-36deb339d756" />
+
