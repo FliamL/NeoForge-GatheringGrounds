@@ -12,10 +12,21 @@ public class ModFoodProperties {
             .effect(() -> new MobEffectInstance(ModEffects.TANSY_EFFECT, 100), 1f)
             .build();
 
+    public static final FoodProperties TANSYFLOWERING = new FoodProperties.Builder()
+            .nutrition(2)
+            .saturationModifier(0.25f)
+            .effect(() -> new MobEffectInstance(MobEffects.POISON, 100), 1f) // 5 seconds of Poison
+            .build();
+
     public static final FoodProperties COMFREY = new FoodProperties.Builder()
             .nutrition(2)
             .saturationModifier(0.25f)
             .effect(() -> new MobEffectInstance(ModEffects.COMFREY_EFFECT, 200), 1f)
+            .build();
+
+    public static final FoodProperties MINT = new FoodProperties.Builder()
+            .nutrition(2)
+            .saturationModifier(0.25f)
             .build();
 
     public static final FoodProperties ROZENBOTTEL = new FoodProperties.Builder()
@@ -44,7 +55,6 @@ public class ModFoodProperties {
     public static final FoodProperties CHAMOMILE_CAKE = new FoodProperties.Builder()
             .nutrition(5)
             .saturationModifier(0.5f)
-            .effect(() -> new MobEffectInstance(ModEffects.CHAMOMILE_EFFECT, 1), 1f)
             .build();
 
     public static final FoodProperties CHAMOMILE_TEA = new FoodProperties.Builder()

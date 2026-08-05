@@ -15,9 +15,6 @@ public class ModEffects {
     public static final Holder<MobEffect> TANSY_EFFECT = MOB_EFFECTS.register("tansy",
             () -> new TansyEffect(MobEffectCategory.NEUTRAL, 0xd4aa39));
 
-    public static final Holder<MobEffect> CHAMOMILE_EFFECT = MOB_EFFECTS.register("chamomile",
-            () -> new ChamomileEffect(MobEffectCategory.NEUTRAL, 0xffffff));
-
     public static final Holder<MobEffect> COMFREY_EFFECT = MOB_EFFECTS.register("comfrey",
             () -> new ComfreyEffect(MobEffectCategory.BENEFICIAL, 0x4a7c2f));
 

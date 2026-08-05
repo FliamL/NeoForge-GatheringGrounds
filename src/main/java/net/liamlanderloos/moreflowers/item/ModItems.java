@@ -56,7 +56,7 @@ public class ModItems {
     public static final DeferredItem<Item> MINT = ITEMS.register("mint",
             () -> new BlockItem(
                     ModBlocks.MINT_BLOCK.get(), // the block itself
-                    new Item.Properties().food(ModFoodProperties.TANSY) // edible properties
+                    new Item.Properties().food(ModFoodProperties.MINT) // edible properties
             ));
 
     public static final DeferredItem<Item> NETTLE = ITEMS.register("nettle",
@@ -104,7 +104,7 @@ public class ModItems {
     public static final DeferredItem<Item> TANSYFLOWERING = ITEMS.register("tansyflowering",
             () -> new BlockItem(
                     ModBlocks.TANSYFLOWERING_BLOCK.get(), // the block itself
-                    new Item.Properties().food(ModFoodProperties.TANSY) // edible properties
+                    new Item.Properties().food(ModFoodProperties.TANSYFLOWERING) // edible properties
             ));
 
     public static final DeferredItem<Item> THYME = ITEMS.register("thyme",
@@ -181,7 +181,7 @@ public class ModItems {
             () -> new Item(new Item.Properties().food(ModFoodProperties.TANSY_PANCAKE)));
 
     public static final DeferredItem<Item> CHAMOMILE_CAKE = ITEMS.register("chamomile_cake",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.CHAMOMILE_CAKE)));
+            () -> new ChamomileCakeItem(new Item.Properties().food(ModFoodProperties.CHAMOMILE_CAKE)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

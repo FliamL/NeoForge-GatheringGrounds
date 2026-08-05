@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "moreflowers:marigold"
+          "name": "moreflowers:rue"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "moreflowers:blocks/marigold"
+  "random_sequence": "moreflowers:blocks/rue"
 }
