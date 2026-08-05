@@ -2,11 +2,11 @@ package net.liamlanderloos.moreflowers.event;
 
 import net.liamlanderloos.moreflowers.effect.ModEffects;
 import net.minecraft.ChatFormatting;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.protocol.game.ClientboundEntityEventPacket;
 import net.minecraft.network.protocol.game.ClientboundSoundPacket;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -29,31 +29,21 @@ public class PlayerDeathHandler {
         if (!(event.getEntity() instanceof ServerPlayer player)) return;
 
         if (!player.hasEffect(ModEffects.TANSY_EFFECT)) {
-            return ;
+            return;
         }
-
-        player.level().playSound(
-                null, // null means play for all nearby players
-                player.getX(),
-                player.getY(),
-                player.getZ(),
-                net.minecraft.sounds.SoundEvents.TOTEM_USE,
-                net.minecraft.sounds.SoundSource.PLAYERS,
-                0.5F,
-                1.0F
-        );
 
         event.setCanceled(true);
         player.setHealth(player.getMaxHealth());
 
+        BlockPos respawnPos = player.getRespawnPosition();
+        BlockPos fallbackPos = player.server.overworld().getSharedSpawnPos();
+        BlockPos targetPos = respawnPos != null ? respawnPos : fallbackPos;
+
         player.teleportTo(
                 player.server.getLevel(player.getRespawnDimension()),
-                player.getRespawnPosition() != null
-                        ? player.getRespawnPosition().getX() + 0.5 : player.server.overworld().getSharedSpawnPos().getX() + 0.5,
-                player.getRespawnPosition() != null
-                        ? player.getRespawnPosition().getY() : player.server.overworld().getSharedSpawnPos().getY(),
-                player.getRespawnPosition() != null
-                        ? player.getRespawnPosition().getZ() + 0.5 : player.server.overworld().getSharedSpawnPos().getZ() + 0.5,
+                targetPos.getX() + 0.5,
+                targetPos.getY(),
+                targetPos.getZ() + 0.5,
                 player.getYRot(),
                 player.getXRot()
         );

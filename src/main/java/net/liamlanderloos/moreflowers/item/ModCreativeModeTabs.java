@@ -4,7 +4,6 @@ import net.liamlanderloos.moreflowers.MoreFlowers;
 import net.liamlanderloos.moreflowers.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
@@ -21,8 +20,6 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.moreflowers.flower_items"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.TANSY);
-                        output.accept(ModItems.TANSY_PANCAKE);
-                        output.accept((ModBlocks.MUD_POT));
                         output.accept(ModItems.COMFREY);
                         output.accept(ModItems.HOREHOUND);
                         output.accept(ModItems.HYSOP);
@@ -46,13 +43,36 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.ELDER);
                         output.accept(ModItems.FENNEL);
                         output.accept(ModItems.CHAMOMILE);
-                        output.accept(ModItems.CHAMOMILE_CAKE);
-                        output.accept(ModItems.CHAMOMILE_TEA);
-                        output.accept(ModItems.CUP);
+                    })
+                    .build());
+
+    public static final Supplier<CreativeModeTab> FLOWER_BLOCKS_TAB = CREATIVE_MODE_TAB.register("flower_blocks_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.MUD_POT.get()))
+                    .title(Component.translatable("creativetab.moreflowers.flower_blocks"))
+                    .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModBlocks.MUD_POT);
                         output.accept(ModItems.HOPS);
-                        output.accept(ModItems.HOPS_SEED);
+                    })
+                    .build());
+
+    public static final Supplier<CreativeModeTab> POTIONS_TAB = CREATIVE_MODE_TAB.register("potions_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.CHAMOMILE_TEA.get()))
+                    .title(Component.translatable("creativetab.moreflowers.potions"))
+                    .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModItems.CUP);
                         output.accept(ModItems.CUP_OF_WATER);
+                        output.accept(ModItems.HOPS_SEED);
+                        output.accept(ModItems.CHAMOMILE_TEA);
                         output.accept(ModItems.BEER);
+                    })
+                    .build());
+
+    public static final Supplier<CreativeModeTab> FOOD_ITEMS_TAB = CREATIVE_MODE_TAB.register("food_items_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.CHAMOMILE_CAKE.get()))
+                    .title(Component.translatable("creativetab.moreflowers.food_items"))
+                    .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModItems.TANSY_PANCAKE);
+                        output.accept(ModItems.CHAMOMILE_CAKE);
                     })
                     .build());
 

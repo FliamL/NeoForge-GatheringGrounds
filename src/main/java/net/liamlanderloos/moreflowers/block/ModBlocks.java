@@ -7,7 +7,11 @@ import net.liamlanderloos.moreflowers.item.ModItems;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerBlock;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.VineBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
@@ -55,7 +59,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> VALERIAN_BLOCK = registerHerb("valerian");
     public static final DeferredBlock<Block> WORMWOOD_BLOCK = registerHerb("wormwood");
     public static final DeferredBlock<Block> YARROW_BLOCK = registerHerb("yarrow");
-    public static final DeferredBlock<Block> DANDELIONBOOM_BLOCK = registerHerb("dandelionbloom");
+    public static final DeferredBlock<Block> DANDELIONBLOOM_BLOCK = registerHerb("dandelionbloom");
     public static final DeferredBlock<Block> ELDER_BLOCK = registerHerb("elder");
     public static final DeferredBlock<Block> FENNEL_BLOCK = registerHerb("fennel");
     public static final DeferredBlock<Block> CHAMOMILE_BLOCK = registerHerb("chamomile");
@@ -88,9 +92,9 @@ public class ModBlocks {
         return block;
     }
 
-    private static <T extends Block> DeferredBlock<T> registerCutout(String name, Supplier<T> supplier) {
-        DeferredBlock<T> block = BLOCKS.register(name, supplier);
-        CUTOUT_BLOCKS.add((DeferredBlock<Block>) block);
+    private static DeferredBlock<Block> registerCutout(String name, Supplier<Block> supplier) {
+        DeferredBlock<Block> block = BLOCKS.register(name, supplier);
+        CUTOUT_BLOCKS.add(block);
         return block;
     }
 
