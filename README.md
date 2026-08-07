@@ -1,5 +1,5 @@
 # MoreFlowers
-## Welcome to the MoreFlowers mod, this is a project a PHD.
+## Welcome to the MoreFlowers mod, this is a PHD project.
 
 ## Description
 Overview of the Minecraft project:
