@@ -1,0 +1,9 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:plains",
+    "minecraft:savanna"
+  ],
+  "features": "moreflowers:horehound_patch",
+  "step": "vegetal_decoration"
+}

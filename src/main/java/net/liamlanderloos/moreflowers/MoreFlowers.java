@@ -6,6 +6,7 @@ import net.liamlanderloos.moreflowers.event.PlayerDeathHandler;
 import net.liamlanderloos.moreflowers.item.ModCreativeModeTabs;
 import net.liamlanderloos.moreflowers.item.ModItems;
 import net.liamlanderloos.moreflowers.potion.ModPotions;
+import net.liamlanderloos.moreflowers.worldgen.ModFeatures;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -30,6 +31,7 @@ public class MoreFlowers {
         ModItems.register(modEventBus);
         ModEffects.register(modEventBus);
         ModPotions.register(modEventBus);
+        ModFeatures.register(modEventBus);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);

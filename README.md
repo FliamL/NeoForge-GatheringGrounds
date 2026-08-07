@@ -15,15 +15,15 @@ All plants are pollinateable by bees and have a loot table when broken in surviv
 
 | Plant | Description | Natural Spawn |
 |-------|-------------|----------------|
-| **Chamomile** | Applies **Slowness II** for 10 seconds when eaten raw. Also the key ingredient for brewing **Chamomile Tea**. | Not yet naturally generated |
-| **Comfrey** | Grants **Comfrey's Mend** for 10 seconds, slowly repairing your most damaged weapon or armor piece over time. | Not yet naturally generated |
-| **Horehound** | Grants **Haste II** for 60 seconds, increasing mining speed. | Not yet naturally generated |
-| **Hops** | Grown as a crop; harvesting it drops **Hops Seeds**, used to brew **Beer**. Not eaten directly. | Not yet naturally generated |
-| **Marigold** | Restores hunger; eating it has no effect, but the *placed block* has a unique passive ability (see Blocks). | Not yet naturally generated |
-| **Mint** | Eating it alone does nothing special. If two players each eat Mint within 5 blocks of each other and within 5 seconds, both get the **Mint Buddy Buff**: **Luck II** for 60 seconds. | Not yet naturally generated |
-| **Rozenbottel** (Rose Hip) | Restores extra hunger when eaten while standing in a cold/snowy biome. No status effect. | Not yet naturally generated |
-| **Tansy** (*Tanacetum vulgare*) | Grants **Tansy's Blessing** for 5 seconds. If you die while the effect is active, the death is cancelled, you're healed to full and teleported to your respawn point (totem-of-undying style). The blessing is consumed after saving you once. | Plains, Sunflower Plains, Meadow, Flower Forest, River — grows in dense clonal-style patches, mirroring how the real plant colonizes sunny, open ground via rhizomes |
-| **Tansyflowering** | Inflicts **Poison** for 5 seconds when eaten. | Not yet naturally generated |
+| **Chamomile** | Applies **Slowness II** for 10 seconds when eaten raw. Also the key ingredient for brewing **Chamomile Tea**. | Plains, Sunflower Plains, Meadow — loose, moderate stands, matching how the real annual self-sows on sunny disturbed/waste ground rather than forming aggressive colonies |
+| **Comfrey** | Grants **Comfrey's Mend** for 10 seconds, slowly repairing your most damaged weapon or armor piece over time. | River, Meadow, Swamp — moderate clumps near water, matching the real plant's preference for damp meadows, riverbanks, and ditches |
+| **Horehound** | Grants **Haste II** for 60 seconds, increasing mining speed. | Plains, Savanna — sparse stands, matching the real plant's preference for dry, drought-tolerant, disturbed ground |
+| **Hops** | Grown as a crop; harvesting it drops **Hops Seeds**, used to brew **Beer**. Not eaten directly. | Forest, Birch Forest, River — climbs onto tree trunks like a vine, matching how the real plant scrambles up hedgerows and trees along woodland edges and riverbanks |
+| **Marigold** | Restores hunger; eating it has no effect, but the *placed block* has a unique passive ability (see Blocks). | Plains, Sunflower Plains, Meadow, Flower Forest — sparse, scattered plants, matching the real flower's habit as a garden escapee rather than a rampant colonizer |
+| **Mint** | Eating it alone does nothing special. If two players each eat Mint within 5 blocks of each other and within 5 seconds, both get the **Mint Buddy Buff**: **Luck II** for 60 seconds. | River, Swamp, Meadow — very dense patches, matching how the real plant aggressively colonizes wet ground via rhizomes |
+| **Rozenbottel** (Rose Hip) | Restores extra hunger when eaten while standing in a cold/snowy biome. No status effect. | Forest, Taiga, Snowy Taiga, Grove — scattered individual bushes, matching wild rose's habit of growing along hedgerows and woodland margins, including cold-hardy northern varieties |
+| **Tansy** (*Tanacetum vulgare*) | Grants **Tansy's Blessing** for 5 seconds. If you die while the effect is active, the death is cancelled, you're healed to full and teleported to your respawn point (totem-of-undying style). The blessing is consumed after saving you once. | Plains, Sunflower Plains, Meadow, Flower Forest, River — grows in dense clonal-style patches, mirroring how the real plant colonizes sunny, open ground via rhizomes. Patches are a mix of Tansy and flowering Tansy, since it's the same plant at different bloom stages |
+| **Tansyflowering** | Inflicts **Poison** for 5 seconds when eaten. | Generates as part of Tansy's patches (see above) rather than its own separate feature — it's the same plant in bloom |
 | **Dandelion Bloom** | Restores hunger. No unique effect. | Not yet naturally generated |
 | **Elder** | Restores hunger. No unique effect. | Not yet naturally generated |
 | **Fennel** | Restores hunger. No unique effect. | Not yet naturally generated |

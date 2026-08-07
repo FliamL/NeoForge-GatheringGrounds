@@ -2,10 +2,21 @@
   "type": "minecraft:simple_block",
   "config": {
     "to_place": {
-      "type": "minecraft:simple_state_provider",
-      "state": {
-        "Name": "moreflowers:tansy"
-      }
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "data": {
+            "Name": "moreflowers:tansy"
+          },
+          "weight": 3
+        },
+        {
+          "data": {
+            "Name": "moreflowers:tansyflowering"
+          },
+          "weight": 1
+        }
+      ]
     }
   }
 }
