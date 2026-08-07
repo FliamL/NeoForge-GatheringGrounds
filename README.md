@@ -13,33 +13,33 @@ All plants are pollinateable by bees and have a loot table when broken in surviv
 
 # Plants
 
-| Plant | Description |
-|-------|-------------|
-| **Chamomile** | Applies **Slowness II** for 10 seconds when eaten raw. Also the key ingredient for brewing **Chamomile Tea**. |
-| **Comfrey** | Grants **Comfrey's Mend** for 10 seconds, slowly repairing your most damaged weapon or armor piece over time. |
-| **Horehound** | Grants **Haste II** for 60 seconds, increasing mining speed. |
-| **Hops** | Grown as a crop; harvesting it drops **Hops Seeds**, used to brew **Beer**. Not eaten directly. |
-| **Marigold** | Restores hunger; eating it has no effect, but the *placed block* has a unique passive ability (see Blocks). |
-| **Mint** | Eating it alone does nothing special. If two players each eat Mint within 5 blocks of each other and within 5 seconds, both get the **Mint Buddy Buff**: **Luck II** for 60 seconds. |
-| **Rozenbottel** (Rose Hip) | Restores extra hunger when eaten while standing in a cold/snowy biome. No status effect. |
-| **Tansy** (*Tanacetum vulgare*) | Grants **Tansy's Blessing** for 5 seconds. If you die while the effect is active, the death is cancelled, you're healed to full and teleported to your respawn point (totem-of-undying style). The blessing is consumed after saving you once. Generates naturally in dense clonal-style patches in Plains, Sunflower Plains, Meadow, Flower Forest, and River biomes, mirroring how the real plant colonizes sunny, open ground via rhizomes. |
-| **Tansyflowering** | Inflicts **Poison** for 5 seconds when eaten. |
-| **Dandelion Bloom** | Restores hunger. No unique effect. |
-| **Elder** | Restores hunger. No unique effect. |
-| **Fennel** | Restores hunger. No unique effect. |
-| **Hysop** | Restores hunger. No unique effect. |
-| **Lavender** | Restores hunger. No unique effect. |
-| **Lovage** | Restores hunger. No unique effect. |
-| **Nettle** | Restores hunger. No unique effect. |
-| **Peppermint** | Restores hunger. No unique effect. |
-| **Plantain** | Restores hunger. No unique effect. |
-| **Rosemary** | Restores hunger. No unique effect. |
-| **Rue** | Restores hunger. No unique effect. |
-| **Sage** | Restores hunger. No unique effect. |
-| **Thyme** | Restores hunger. No unique effect. |
-| **Valerian** | Restores hunger. No unique effect. |
-| **Wormwood** | Restores hunger. No unique effect. |
-| **Yarrow** | Restores hunger. No unique effect. |
+| Plant | Description | Natural Spawn |
+|-------|-------------|----------------|
+| **Chamomile** | Applies **Slowness II** for 10 seconds when eaten raw. Also the key ingredient for brewing **Chamomile Tea**. | Not yet naturally generated |
+| **Comfrey** | Grants **Comfrey's Mend** for 10 seconds, slowly repairing your most damaged weapon or armor piece over time. | Not yet naturally generated |
+| **Horehound** | Grants **Haste II** for 60 seconds, increasing mining speed. | Not yet naturally generated |
+| **Hops** | Grown as a crop; harvesting it drops **Hops Seeds**, used to brew **Beer**. Not eaten directly. | Not yet naturally generated |
+| **Marigold** | Restores hunger; eating it has no effect, but the *placed block* has a unique passive ability (see Blocks). | Not yet naturally generated |
+| **Mint** | Eating it alone does nothing special. If two players each eat Mint within 5 blocks of each other and within 5 seconds, both get the **Mint Buddy Buff**: **Luck II** for 60 seconds. | Not yet naturally generated |
+| **Rozenbottel** (Rose Hip) | Restores extra hunger when eaten while standing in a cold/snowy biome. No status effect. | Not yet naturally generated |
+| **Tansy** (*Tanacetum vulgare*) | Grants **Tansy's Blessing** for 5 seconds. If you die while the effect is active, the death is cancelled, you're healed to full and teleported to your respawn point (totem-of-undying style). The blessing is consumed after saving you once. | Plains, Sunflower Plains, Meadow, Flower Forest, River — grows in dense clonal-style patches, mirroring how the real plant colonizes sunny, open ground via rhizomes |
+| **Tansyflowering** | Inflicts **Poison** for 5 seconds when eaten. | Not yet naturally generated |
+| **Dandelion Bloom** | Restores hunger. No unique effect. | Not yet naturally generated |
+| **Elder** | Restores hunger. No unique effect. | Not yet naturally generated |
+| **Fennel** | Restores hunger. No unique effect. | Not yet naturally generated |
+| **Hysop** | Restores hunger. No unique effect. | Not yet naturally generated |
+| **Lavender** | Restores hunger. No unique effect. | Not yet naturally generated |
+| **Lovage** | Restores hunger. No unique effect. | Not yet naturally generated |
+| **Nettle** | Restores hunger. No unique effect. | Not yet naturally generated |
+| **Peppermint** | Restores hunger. No unique effect. | Not yet naturally generated |
+| **Plantain** | Restores hunger. No unique effect. | Not yet naturally generated |
+| **Rosemary** | Restores hunger. No unique effect. | Not yet naturally generated |
+| **Rue** | Restores hunger. No unique effect. | Not yet naturally generated |
+| **Sage** | Restores hunger. No unique effect. | Not yet naturally generated |
+| **Thyme** | Restores hunger. No unique effect. | Not yet naturally generated |
+| **Valerian** | Restores hunger. No unique effect. | Not yet naturally generated |
+| **Wormwood** | Restores hunger. No unique effect. | Not yet naturally generated |
+| **Yarrow** | Restores hunger. No unique effect. | Not yet naturally generated |
 
 # Items
 
