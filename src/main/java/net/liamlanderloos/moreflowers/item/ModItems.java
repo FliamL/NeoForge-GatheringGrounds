@@ -19,30 +19,30 @@ public class ModItems {
     public static final DeferredItem<Item> TANSY = registerHerbFood("tansy", ModBlocks.TANSY_BLOCK, ModFoodProperties.TANSY, ModFoodProperties.TANSY_CONSUMABLE);
     public static final DeferredItem<Item> COMFREY = registerHerbFood("comfrey", ModBlocks.COMFREY_BLOCK, ModFoodProperties.COMFREY, ModFoodProperties.COMFREY_CONSUMABLE);
     public static final DeferredItem<Item> HOREHOUND = registerHerbFood("horehound", ModBlocks.HOREHOUND_BLOCK, ModFoodProperties.HOREHOUND, ModFoodProperties.HOREHOUND_CONSUMABLE);
-    public static final DeferredItem<Item> HYSOP = registerHerbFood("hysop", ModBlocks.HYSOP_BLOCK, ModFoodProperties.TANSY, ModFoodProperties.TANSY_CONSUMABLE);
-    public static final DeferredItem<Item> LAVENDER = registerHerbFood("lavender", ModBlocks.LAVENDER_BLOCK, ModFoodProperties.TANSY, ModFoodProperties.TANSY_CONSUMABLE);
-    public static final DeferredItem<Item> LOVAGE = registerHerbFood("lovage", ModBlocks.LOVAGE_BLOCK, ModFoodProperties.TANSY, ModFoodProperties.TANSY_CONSUMABLE);
-    public static final DeferredItem<Item> MARIGOLD = registerHerbFood("marigold", ModBlocks.MARIGOLD_BLOCK, ModFoodProperties.TANSY, ModFoodProperties.TANSY_CONSUMABLE);
+    public static final DeferredItem<Item> HYSOP = registerHerbFood("hysop", ModBlocks.HYSOP_BLOCK, ModFoodProperties.TANSY);
+    public static final DeferredItem<Item> LAVENDER = registerHerbFood("lavender", ModBlocks.LAVENDER_BLOCK, ModFoodProperties.TANSY);
+    public static final DeferredItem<Item> LOVAGE = registerHerbFood("lovage", ModBlocks.LOVAGE_BLOCK, ModFoodProperties.TANSY);
+    public static final DeferredItem<Item> MARIGOLD = registerHerbFood("marigold", ModBlocks.MARIGOLD_BLOCK, ModFoodProperties.TANSY);
     public static final DeferredItem<Item> MINT = registerHerbFood("mint", ModBlocks.MINT_BLOCK, ModFoodProperties.MINT);
-    public static final DeferredItem<Item> NETTLE = registerHerbFood("nettle", ModBlocks.NETTLE_BLOCK, ModFoodProperties.TANSY, ModFoodProperties.TANSY_CONSUMABLE);
-    public static final DeferredItem<Item> PEPPERMINT = registerHerbFood("peppermint", ModBlocks.PEPPERMINT_BLOCK, ModFoodProperties.TANSY, ModFoodProperties.TANSY_CONSUMABLE);
-    public static final DeferredItem<Item> PLANTAIN = registerHerbFood("plantain", ModBlocks.PLANTAIN_BLOCK, ModFoodProperties.TANSY, ModFoodProperties.TANSY_CONSUMABLE);
-    public static final DeferredItem<Item> ROSEMARY = registerHerbFood("rosemary", ModBlocks.ROSEMARY_BLOCK, ModFoodProperties.TANSY, ModFoodProperties.TANSY_CONSUMABLE);
+    public static final DeferredItem<Item> NETTLE = registerHerbFood("nettle", ModBlocks.NETTLE_BLOCK, ModFoodProperties.TANSY);
+    public static final DeferredItem<Item> PEPPERMINT = registerHerbFood("peppermint", ModBlocks.PEPPERMINT_BLOCK, ModFoodProperties.TANSY);
+    public static final DeferredItem<Item> PLANTAIN = registerHerbFood("plantain", ModBlocks.PLANTAIN_BLOCK, ModFoodProperties.TANSY);
+    public static final DeferredItem<Item> ROSEMARY = registerHerbFood("rosemary", ModBlocks.ROSEMARY_BLOCK, ModFoodProperties.TANSY);
 
     public static final DeferredItem<Item> ROZENBOTTEL = ITEMS.registerItem("rozenbottel",
             properties -> new RozenbottelItem(ModBlocks.ROZENBOTTEL_BLOCK.get(), properties),
             () -> new Item.Properties().food(ModFoodProperties.ROZENBOTTEL));
 
-    public static final DeferredItem<Item> RUE = registerHerbFood("rue", ModBlocks.RUE_BLOCK, ModFoodProperties.TANSY, ModFoodProperties.TANSY_CONSUMABLE);
-    public static final DeferredItem<Item> SAGE = registerHerbFood("sage", ModBlocks.SAGE_BLOCK, ModFoodProperties.TANSY, ModFoodProperties.TANSY_CONSUMABLE);
+    public static final DeferredItem<Item> RUE = registerHerbFood("rue", ModBlocks.RUE_BLOCK, ModFoodProperties.TANSY);
+    public static final DeferredItem<Item> SAGE = registerHerbFood("sage", ModBlocks.SAGE_BLOCK, ModFoodProperties.TANSY);
     public static final DeferredItem<Item> TANSYFLOWERING = registerHerbFood("tansyflowering", ModBlocks.TANSYFLOWERING_BLOCK, ModFoodProperties.TANSYFLOWERING, ModFoodProperties.TANSYFLOWERING_CONSUMABLE);
-    public static final DeferredItem<Item> THYME = registerHerbFood("thyme", ModBlocks.THYME_BLOCK, ModFoodProperties.TANSY, ModFoodProperties.TANSY_CONSUMABLE);
-    public static final DeferredItem<Item> VALERIAN = registerHerbFood("valerian", ModBlocks.VALERIAN_BLOCK, ModFoodProperties.TANSY, ModFoodProperties.TANSY_CONSUMABLE);
-    public static final DeferredItem<Item> WORMWOOD = registerHerbFood("wormwood", ModBlocks.WORMWOOD_BLOCK, ModFoodProperties.TANSY, ModFoodProperties.TANSY_CONSUMABLE);
-    public static final DeferredItem<Item> YARROW = registerHerbFood("yarrow", ModBlocks.YARROW_BLOCK, ModFoodProperties.TANSY, ModFoodProperties.TANSY_CONSUMABLE);
-    public static final DeferredItem<Item> DANDELIONBLOOM = registerHerbFood("dandelionbloom", ModBlocks.DANDELIONBLOOM_BLOCK, ModFoodProperties.TANSY, ModFoodProperties.TANSY_CONSUMABLE);
-    public static final DeferredItem<Item> ELDER = registerHerbFood("elder", ModBlocks.ELDER_BLOCK, ModFoodProperties.TANSY, ModFoodProperties.TANSY_CONSUMABLE);
-    public static final DeferredItem<Item> FENNEL = registerHerbFood("fennel", ModBlocks.FENNEL_BLOCK, ModFoodProperties.TANSY, ModFoodProperties.TANSY_CONSUMABLE);
+    public static final DeferredItem<Item> THYME = registerHerbFood("thyme", ModBlocks.THYME_BLOCK, ModFoodProperties.TANSY);
+    public static final DeferredItem<Item> VALERIAN = registerHerbFood("valerian", ModBlocks.VALERIAN_BLOCK, ModFoodProperties.TANSY);
+    public static final DeferredItem<Item> WORMWOOD = registerHerbFood("wormwood", ModBlocks.WORMWOOD_BLOCK, ModFoodProperties.TANSY);
+    public static final DeferredItem<Item> YARROW = registerHerbFood("yarrow", ModBlocks.YARROW_BLOCK, ModFoodProperties.TANSY);
+    public static final DeferredItem<Item> DANDELIONBLOOM = registerHerbFood("dandelionbloom", ModBlocks.DANDELIONBLOOM_BLOCK, ModFoodProperties.TANSY);
+    public static final DeferredItem<Item> ELDER = registerHerbFood("elder", ModBlocks.ELDER_BLOCK, ModFoodProperties.TANSY);
+    public static final DeferredItem<Item> FENNEL = registerHerbFood("fennel", ModBlocks.FENNEL_BLOCK, ModFoodProperties.TANSY);
     public static final DeferredItem<Item> CHAMOMILE = registerHerbFood("chamomile", ModBlocks.CHAMOMILE_BLOCK, ModFoodProperties.CHAMOMILE, ModFoodProperties.CHAMOMILE_CONSUMABLE);
 
     public static final DeferredItem<Item> HOPS = ITEMS.registerItem("hops",
