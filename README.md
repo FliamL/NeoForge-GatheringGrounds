@@ -22,7 +22,7 @@ All plants are pollinateable by bees and have a loot table when broken in surviv
 | **Marigold** | Restores hunger; eating it has no effect, but the *placed block* has a unique passive ability (see Blocks). |
 | **Mint** | Eating it alone does nothing special. If two players each eat Mint within 5 blocks of each other and within 5 seconds, both get the **Mint Buddy Buff**: **Luck II** for 60 seconds. |
 | **Rozenbottel** (Rose Hip) | Restores extra hunger when eaten while standing in a cold/snowy biome. No status effect. |
-| **Tansy** (*Tanacetum vulgare*) | Grants **Tansy's Blessing** for 5 seconds. If you die while the effect is active, the death is cancelled, you're healed to full and teleported to your respawn point (totem-of-undying style). The blessing is consumed after saving you once. |
+| **Tansy** (*Tanacetum vulgare*) | Grants **Tansy's Blessing** for 5 seconds. If you die while the effect is active, the death is cancelled, you're healed to full and teleported to your respawn point (totem-of-undying style). The blessing is consumed after saving you once. Generates naturally in dense clonal-style patches in Plains, Sunflower Plains, Meadow, Flower Forest, and River biomes, mirroring how the real plant colonizes sunny, open ground via rhizomes. |
 | **Tansyflowering** | Inflicts **Poison** for 5 seconds when eaten. |
 | **Dandelion Bloom** | Restores hunger. No unique effect. |
 | **Elder** | Restores hunger. No unique effect. |

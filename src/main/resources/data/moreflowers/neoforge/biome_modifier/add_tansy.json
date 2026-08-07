@@ -1,0 +1,12 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:plains",
+    "minecraft:sunflower_plains",
+    "minecraft:meadow",
+    "minecraft:flower_forest",
+    "minecraft:river"
+  ],
+  "features": "moreflowers:tansy_patch",
+  "step": "vegetal_decoration"
+}
