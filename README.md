@@ -9,7 +9,7 @@ The project uses Minecraft to model magical systems as alternative epistemologie
 
 All plants are pollinateable by bees and have a loot table when broken in survival
 
-[Fiverr link](https://www.fiverr.com/sellers/liamlanderloos)
+[CurseForge page](https://www.curseforge.com/minecraft/mc-mods/more-flowers-mod)
 
 # Plants
 
