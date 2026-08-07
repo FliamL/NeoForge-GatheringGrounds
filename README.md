@@ -9,23 +9,27 @@ The project uses Minecraft to model magical systems as alternative epistemologie
 
 All plants are pollinateable by bees and have a loot table when broken in survival
 
-[Fiver link]([https://www.google.com](https://www.fiverr.com/sellers/liamlanderloos/edit))
+[Fiverr link](https://www.fiverr.com/sellers/liamlanderloos)
 
 # Plants
 
 | Plant | Description |
 |-------|-------------|
-| **Tansy** (*Tanacetum vulgare*) | Grants **Tansy's Blessing** for 5 seconds. If you die while the effect is active, the death is cancelled, you're healed to full and teleported to your respawn point (totem-of-undying style). The blessing is consumed after saving you once. |
-| **Tansyflowering** | Inflicts **Poison** for 5 seconds when eaten. |
+| **Chamomile** | Applies **Slowness II** for 10 seconds when eaten raw. Also the key ingredient for brewing **Chamomile Tea**. |
 | **Comfrey** | Grants **Comfrey's Mend** for 10 seconds, slowly repairing your most damaged weapon or armor piece over time. |
 | **Horehound** | Grants **Haste II** for 60 seconds, increasing mining speed. |
-| **Chamomile** | Applies **Slowness II** for 10 seconds when eaten raw. Also the key ingredient for brewing **Chamomile Tea**. |
+| **Hops** | Grown as a crop; harvesting it drops **Hops Seeds**, used to brew **Beer**. Not eaten directly. |
+| **Marigold** | Restores hunger; eating it has no effect, but the *placed block* has a unique passive ability (see Blocks). |
 | **Mint** | Eating it alone does nothing special. If two players each eat Mint within 5 blocks of each other and within 5 seconds, both get the **Mint Buddy Buff**: **Luck II** for 60 seconds. |
 | **Rozenbottel** (Rose Hip) | Restores extra hunger when eaten while standing in a cold/snowy biome. No status effect. |
+| **Tansy** (*Tanacetum vulgare*) | Grants **Tansy's Blessing** for 5 seconds. If you die while the effect is active, the death is cancelled, you're healed to full and teleported to your respawn point (totem-of-undying style). The blessing is consumed after saving you once. |
+| **Tansyflowering** | Inflicts **Poison** for 5 seconds when eaten. |
+| **Dandelion Bloom** | Restores hunger. No unique effect. |
+| **Elder** | Restores hunger. No unique effect. |
+| **Fennel** | Restores hunger. No unique effect. |
 | **Hysop** | Restores hunger. No unique effect. |
 | **Lavender** | Restores hunger. No unique effect. |
 | **Lovage** | Restores hunger. No unique effect. |
-| **Marigold** | Restores hunger; eating it has no effect, but the *placed block* has a unique passive ability (see Blocks). |
 | **Nettle** | Restores hunger. No unique effect. |
 | **Peppermint** | Restores hunger. No unique effect. |
 | **Plantain** | Restores hunger. No unique effect. |
@@ -36,19 +40,15 @@ All plants are pollinateable by bees and have a loot table when broken in surviv
 | **Valerian** | Restores hunger. No unique effect. |
 | **Wormwood** | Restores hunger. No unique effect. |
 | **Yarrow** | Restores hunger. No unique effect. |
-| **Dandelion Bloom** | Restores hunger. No unique effect. |
-| **Elder** | Restores hunger. No unique effect. |
-| **Fennel** | Restores hunger. No unique effect. |
-| **Hops** | Grown as a crop; harvesting it drops **Hops Seeds**, used to brew **Beer**. Not eaten directly. |
 
 # Items
 
 | Item | Description |
 |------|-------------|
-| **Tansy Pancake** | Crafted from Egg + Wheat + Tansy + Milk Bucket. Grants **Tansy's Blessing** for 20 seconds — a longer window than raw Tansy. |
-| **Chamomile Tea** | Brewed at a brewing stand from a **Cup of Water** + **Chamomile**. Grants **Strength II** and **Speed II**, both for 30 seconds. |
-| **Chamomile Cake** | Crafted from 2x Egg + Wheat + Chamomile + Milk Bucket. Instantly sets the world to daytime and shows a chat message. Grants no status effect. |
 | **Beer** | Brewed at a brewing stand from a **Water Bottle** + **Hops Seed**. Applies **Nausea** for 30 seconds. |
+| **Chamomile Cake** | Crafted from 2x Egg + Wheat + Chamomile + Milk Bucket. Instantly sets the world to daytime and shows a chat message. Grants no status effect. |
+| **Chamomile Tea** | Brewed at a brewing stand from a **Cup of Water** + **Chamomile**. Grants **Strength II** and **Speed II**, both for 30 seconds. |
+| **Tansy Pancake** | Crafted from Egg + Wheat + Tansy + Milk Bucket. Grants **Tansy's Blessing** for 20 seconds — a longer window than raw Tansy. |
 | **Cup** | Right-click a water source to fill it into a **Cup of Water**. Right-click an Ender Dragon's breath cloud to collect **Dragon's Breath** instead. |
 | **Cup of Water** | Drinkable on its own (no effect) and serves as the brewing-stand base for **Chamomile Tea**. |
 | **Hops Seed** | Plant to grow Hops; also the brewing-stand ingredient (with a Water Bottle) for **Beer**. |
@@ -57,9 +57,9 @@ All plants are pollinateable by bees and have a loot table when broken in surviv
 
 | Block | Description |
 |-------|-------------|
+| **Hops** | A climbable vine crop. Harvesting drops Hops Seeds, used to brew **Beer**. |
 | **Marigold** | Passively repels hostile mobs within a 7-block radius: clears their attack target and pushes them away. Phantoms are shoved upward and outward to flee. |
 | **Mud Pot** | Acts as a self-powered redstone clock, automatically emitting a 1-tick pulse every 5–10 seconds (randomized) after being placed. Crafted using **Mud**, an **Iron Nugget**, and a **Flower Pot**. Breaking it drops a Flower Pot + Poppy. |
-| **Hops** | A climbable vine crop. Harvesting drops Hops Seeds, used to brew **Beer**. |
 
 
 <img width="1500" height="962" alt="ThV1WbM" src="https://github.com/user-attachments/assets/bd61f16f-7269-492d-899c-18a83435b4fe" />
