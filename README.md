@@ -18,7 +18,7 @@ All plants are pollinateable by bees and have a loot table when broken in surviv
 | **Chamomile** | Applies **Slowness II** for 10 seconds when eaten raw. Also the key ingredient for brewing **Chamomile Tea**. | Plains, Sunflower Plains, Meadow — loose, moderate stands, matching how the real annual self-sows on sunny disturbed/waste ground rather than forming aggressive colonies |
 | **Comfrey** | Grants **Comfrey's Mend** for 10 seconds, slowly repairing your most damaged weapon or armor piece over time. | River, Meadow, Swamp — moderate clumps near water, matching the real plant's preference for damp meadows, riverbanks, and ditches |
 | **Horehound** | Grants **Haste II** for 60 seconds, increasing mining speed. | Plains, Savanna — sparse stands, matching the real plant's preference for dry, drought-tolerant, disturbed ground |
-| **Hops** | Grown as a crop; harvesting it drops **Hops Seeds**, used to brew **Beer**. Not eaten directly. | Forest, Birch Forest, River — climbs onto tree trunks like a vine, matching how the real plant scrambles up hedgerows and trees along woodland edges and riverbanks |
+| **Hops** | Found growing wild as a climbable vine; breaking it drops **Hops Seeds**, used to brew **Beer**. Not eaten directly. Not currently plantable/farmable — foraged only. | Forest, Birch Forest, River — climbs onto tree trunks like a vine, matching how the real plant scrambles up hedgerows and trees along woodland edges and riverbanks | Forest, Birch Forest, River — climbs onto tree trunks like a vine, matching how the real plant scrambles up hedgerows and trees along woodland edges and riverbanks |
 | **Marigold** | Restores hunger; eating it has no effect, but the *placed block* has a unique passive ability (see Blocks). | Plains, Sunflower Plains, Meadow, Flower Forest — sparse, scattered plants, matching the real flower's habit as a garden escapee rather than a rampant colonizer |
 | **Mint** | Eating it alone does nothing special. If two players each eat Mint within 5 blocks of each other and within 5 seconds, both get the **Mint Buddy Buff**: **Luck II** for 60 seconds. | River, Swamp, Meadow — very dense patches, matching how the real plant aggressively colonizes wet ground via rhizomes |
 | **Rozenbottel** (Rose Hip) | Restores extra hunger when eaten while standing in a cold/snowy biome. No status effect. | Forest, Taiga, Snowy Taiga, Grove — scattered individual bushes, matching wild rose's habit of growing along hedgerows and woodland margins, including cold-hardy northern varieties |
@@ -57,7 +57,7 @@ All plants are pollinateable by bees and have a loot table when broken in surviv
 
 | Block | Description |
 |-------|-------------|
-| **Hops** | A climbable vine crop. Harvesting drops Hops Seeds, used to brew **Beer**. |
+| **Hops** |A wild, climbable vine (behaves like a vanilla vine block). Breaking it drops Hops Seeds, used to brew **Beer**. Not yet plantable/farmable. |
 | **Marigold** | Passively repels hostile mobs within a 7-block radius: clears their attack target and pushes them away. Phantoms are shoved upward and outward to flee. |
 | **Mud Pot** | Acts as a self-powered redstone clock, automatically emitting a 1-tick pulse every 5–10 seconds (randomized) after being placed. Crafted using **Mud**, an **Iron Nugget**, and a **Flower Pot**. Breaking it drops a Flower Pot + Poppy. |
 
