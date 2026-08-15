@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " I ",
+    " M ",
+    " P "
+  ],
+  "key": {
+    "I": "minecraft:iron_nugget",
+    "M": "minecraft:mud",
+    "P": "minecraft:flower_pot"
+  },
+  "result": {
+    "id": "gatheringgrounds:mud_pot",
+    "count": 1
+  }
+}

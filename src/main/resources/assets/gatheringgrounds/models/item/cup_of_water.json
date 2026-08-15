@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "gatheringgrounds:item/cup_of_water"
+  }
+}

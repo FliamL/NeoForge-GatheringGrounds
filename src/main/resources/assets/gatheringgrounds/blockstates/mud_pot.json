@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "power=0": { "model": "gatheringgrounds:block/mud_pot" },
+    "power=1": { "model": "gatheringgrounds:block/mud_pot" },
+    "power=2": { "model": "gatheringgrounds:block/mud_pot" },
+    "power=3": { "model": "gatheringgrounds:block/mud_pot" },
+    "power=4": { "model": "gatheringgrounds:block/mud_pot" },
+    "power=5": { "model": "gatheringgrounds:block/mud_pot" },
+    "power=6": { "model": "gatheringgrounds:block/mud_pot" },
+    "power=7": { "model": "gatheringgrounds:block/mud_pot" },
+    "power=8": { "model": "gatheringgrounds:block/mud_pot" },
+    "power=9": { "model": "gatheringgrounds:block/mud_pot" },
+    "power=10": { "model": "gatheringgrounds:block/mud_pot" },
+    "power=11": { "model": "gatheringgrounds:block/mud_pot" },
+    "power=12": { "model": "gatheringgrounds:block/mud_pot" },
+    "power=13": { "model": "gatheringgrounds:block/mud_pot" },
+    "power=14": { "model": "gatheringgrounds:block/mud_pot" },
+    "power=15": { "model": "gatheringgrounds:block/mud_pot" }
+  }
+}

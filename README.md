@@ -1,5 +1,5 @@
-# MoreFlowers
-## Welcome to the MoreFlowers mod, this is a PHD project.
+# Gathering Grounds
+## Welcome to the Gathering Grounds mod, this is a PHD project.
 
 ## Description
 Overview of the Minecraft project:
@@ -17,10 +17,10 @@ All plants are pollinateable by bees and have a loot table when broken in surviv
 |-------|-------------|----------------|
 | **Chamomile** | Applies **Slowness II** for 10 seconds when eaten raw. Also the key ingredient for brewing **Chamomile Tea**. | Plains, Sunflower Plains, Meadow — loose, moderate stands, matching how the real annual self-sows on sunny disturbed/waste ground rather than forming aggressive colonies |
 | **Comfrey** | Grants **Comfrey's Mend** for 10 seconds, slowly repairing your most damaged weapon or armor piece over time. | River, Meadow, Swamp — moderate clumps near water, matching the real plant's preference for damp meadows, riverbanks, and ditches |
-| **Horehound** | Grants **Haste II** for 60 seconds, increasing mining speed. | Plains, Savanna — sparse stands, matching the real plant's preference for dry, drought-tolerant, disturbed ground |
-| **Hops** | Found growing wild as a climbable vine; breaking it drops **Hops Seeds**, used to brew **Beer**. Not eaten directly. Not currently plantable/farmable — foraged only. | Forest, Birch Forest, River — climbs onto tree trunks like a vine, matching how the real plant scrambles up hedgerows and trees along woodland edges and riverbanks | Forest, Birch Forest, River — climbs onto tree trunks like a vine, matching how the real plant scrambles up hedgerows and trees along woodland edges and riverbanks |
+| **Horehound** | Not edible. Harvested to brew into **Miner's Lung Candy**, which carries the Haste effect instead. | Plains, Savanna — sparse stands, matching the real plant's preference for dry, drought-tolerant, disturbed ground |
+| **Hops** | Found growing wild as a climbable vine; breaking it drops **Hops Seeds**, used to brew **Beer**. Not eaten directly. Not currently plantable/farmable — foraged only. | Forest, Birch Forest, River — climbs onto tree trunks like a vine, matching how the real plant scrambles up hedgerows and trees along woodland edges and riverbanks |
 | **Marigold** | Restores hunger; eating it has no effect, but the *placed block* has a unique passive ability (see Blocks). | Plains, Sunflower Plains, Meadow, Flower Forest — sparse, scattered plants, matching the real flower's habit as a garden escapee rather than a rampant colonizer |
-| **Mint** | Eating it alone does nothing special. If two players each eat Mint within 5 blocks of each other and within 5 seconds, both get the **Mint Buddy Buff**: **Luck II** for 60 seconds. | River, Swamp, Meadow — very dense patches, matching how the real plant aggressively colonizes wet ground via rhizomes |
+| **Mint** | Not edible. Harvested to brew into **Moroccan Mint Tea**, which carries the Mint Buddy Buff instead. | River, Swamp, Meadow — very dense patches, matching how the real plant aggressively colonizes wet ground via rhizomes |
 | **Rozenbottel** (Rose Hip) | Restores extra hunger when eaten while standing in a cold/snowy biome. No status effect. | Forest, Taiga, Snowy Taiga, Grove — scattered individual bushes, matching wild rose's habit of growing along hedgerows and woodland margins, including cold-hardy northern varieties |
 | **Tansy** (*Tanacetum vulgare*) | Grants **Tansy's Blessing** for 5 seconds. If you die while the effect is active, the death is cancelled, you're healed to full and teleported to your respawn point (totem-of-undying style). The blessing is consumed after saving you once. | Plains, Sunflower Plains, Meadow, Flower Forest, River — grows in dense clonal-style patches, mirroring how the real plant colonizes sunny, open ground via rhizomes. Patches are a mix of Tansy and flowering Tansy, since it's the same plant at different bloom stages |
 | **Tansyflowering** | Inflicts **Poison** for 5 seconds when eaten. | Generates as part of Tansy's patches (see above) rather than its own separate feature — it's the same plant in bloom |
@@ -48,9 +48,11 @@ All plants are pollinateable by bees and have a loot table when broken in surviv
 | **Beer** | Brewed at a brewing stand from a **Water Bottle** + **Hops Seed**. Applies **Nausea** for 30 seconds. |
 | **Chamomile Cake** | Crafted from 2x Egg + Wheat + Chamomile + Milk Bucket. Instantly sets the world to daytime and shows a chat message. Grants no status effect. |
 | **Chamomile Tea** | Brewed at a brewing stand from a **Cup of Water** + **Chamomile**. Grants **Strength II** and **Speed II**, both for 30 seconds. |
+| **Moroccan Mint Tea** | Brewed at a brewing stand from a **Cup of Water** + **Mint**. Drinking it alone does nothing special. If two players each drink it within 5 blocks of each other and within 5 seconds, both get the **Mint Buddy Buff**: **Luck II** for 60 seconds. |
 | **Tansy Pancake** | Crafted from Egg + Wheat + Tansy + Milk Bucket. Grants **Tansy's Blessing** for 20 seconds — a longer window than raw Tansy. |
+| **Miner's Lung Candy** | Crafted by combining **Horehound** + **Honey Bottle**. Grants **Haste II** for 60 seconds, increasing mining speed. |
 | **Cup** | Right-click a water source to fill it into a **Cup of Water**. Right-click an Ender Dragon's breath cloud to collect **Dragon's Breath** instead. |
-| **Cup of Water** | Drinkable on its own (no effect) and serves as the brewing-stand base for **Chamomile Tea**. |
+| **Cup of Water** | Drinkable on its own (no effect) and serves as the brewing-stand base for **Chamomile Tea** and **Moroccan Mint Tea**. |
 | **Hops Seed** | Plant to grow Hops; also the brewing-stand ingredient (with a Water Bottle) for **Beer**. |
 
 # Blocks

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:simple_block",
+  "config": {
+    "to_place": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "data": {
+            "Name": "gatheringgrounds:tansy"
+          },
+          "weight": 3
+        },
+        {
+          "data": {
+            "Name": "gatheringgrounds:tansyflowering"
+          },
+          "weight": 1
+        }
+      ]
+    }
+  }
+}
