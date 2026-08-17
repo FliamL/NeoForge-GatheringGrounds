@@ -54,6 +54,7 @@ All plants are pollinateable by bees and have a loot table when broken in surviv
 | **Cup** | Right-click a water source to fill it into a **Cup of Water**. Right-click an Ender Dragon's breath cloud to collect **Dragon's Breath** instead. |
 | **Cup of Water** | Drinkable on its own (no effect) and serves as the brewing-stand base for **Chamomile Tea** and **Moroccan Mint Tea**. |
 | **Hops Seed** | Plant to grow Hops; also the brewing-stand ingredient (with a Water Bottle) for **Beer**. |
+| **Music Disc: Nostalgia** | A rare, jukebox-playable music disc. |
 
 # Blocks
 
