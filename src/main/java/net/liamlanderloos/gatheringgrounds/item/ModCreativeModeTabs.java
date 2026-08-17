@@ -2,11 +2,16 @@ package net.liamlanderloos.gatheringgrounds.item;
 
 import net.liamlanderloos.gatheringgrounds.GatheringGrounds;
 import net.liamlanderloos.gatheringgrounds.block.ModBlocks;
+import net.liamlanderloos.gatheringgrounds.potion.ModPotions;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.alchemy.PotionContents;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
@@ -81,5 +86,20 @@ public class ModCreativeModeTabs {
 
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TAB.register(eventBus);
+        eventBus.addListener(ModCreativeModeTabs::removeVanillaCupOfWaterVariants);
+    }
+
+    // Vanilla auto-generates a Potion/Splash Potion/Lingering Potion/Tipped Arrow for every registered
+    // Potion, including ours. We only want the Cup of Water item itself in the menu.
+    private static void removeVanillaCupOfWaterVariants(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS || event.getTabKey() == CreativeModeTabs.COMBAT) {
+            event.removeIf(
+                    stack -> {
+                        PotionContents contents = stack.get(DataComponents.POTION_CONTENTS);
+                        return contents != null && contents.is(ModPotions.CUP_OF_WATER_POTION);
+                    },
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+            );
+        }
     }
 }
