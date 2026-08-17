@@ -1,0 +1,11 @@
+{
+  "music_disc.nostalgia": {
+    "subtitle": "jukebox_song.gatheringgrounds.nostalgia",
+    "sounds": [
+      {
+        "name": "gatheringgrounds:records/nostalgia",
+        "stream": true
+      }
+    ]
+  }
+}

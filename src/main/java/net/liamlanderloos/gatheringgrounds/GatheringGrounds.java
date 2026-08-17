@@ -6,6 +6,7 @@ import net.liamlanderloos.gatheringgrounds.event.PlayerDeathHandler;
 import net.liamlanderloos.gatheringgrounds.item.ModCreativeModeTabs;
 import net.liamlanderloos.gatheringgrounds.item.ModItems;
 import net.liamlanderloos.gatheringgrounds.potion.ModPotions;
+import net.liamlanderloos.gatheringgrounds.sound.ModSounds;
 import net.liamlanderloos.gatheringgrounds.worldgen.ModFeatures;
 import org.slf4j.Logger;
 
@@ -30,6 +31,7 @@ public class GatheringGrounds {
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
         ModEffects.register(modEventBus);
+        ModSounds.register(modEventBus);
         ModPotions.register(modEventBus);
         ModFeatures.register(modEventBus);
         modEventBus.addListener(ModBlocks::commonSetup);

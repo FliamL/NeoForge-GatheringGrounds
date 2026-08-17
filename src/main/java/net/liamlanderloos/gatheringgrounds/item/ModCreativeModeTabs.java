@@ -52,6 +52,7 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.MUD_POT);
                         output.accept(ModItems.HOPS);
+                        output.accept(ModItems.MUSIC_DISC_NOSTALGIA);
                     })
                     .build());
 

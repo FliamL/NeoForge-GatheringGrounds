@@ -1,0 +1,8 @@
+{
+  "sound_event": "gatheringgrounds:music_disc.nostalgia",
+  "description": {
+    "translate": "jukebox_song.gatheringgrounds.nostalgia"
+  },
+  "length_in_seconds": 220.03,
+  "comparator_output": 11
+}

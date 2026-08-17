@@ -2,9 +2,13 @@ package net.liamlanderloos.gatheringgrounds.item;
 
 import net.liamlanderloos.gatheringgrounds.GatheringGrounds;
 import net.liamlanderloos.gatheringgrounds.block.ModBlocks;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.component.Consumable;
 import net.minecraft.world.item.component.Consumables;
 import net.minecraft.world.level.block.Block;
@@ -83,6 +87,11 @@ public class ModItems {
     public static final DeferredItem<Item> MINER_LUNG_CANDY = ITEMS.registerItem("miner_lung_candy",
             Item::new,
             () -> new Item.Properties().food(ModFoodProperties.MINER_LUNG_CANDY, ModFoodProperties.MINER_LUNG_CANDY_CONSUMABLE));
+
+    public static final DeferredItem<Item> MUSIC_DISC_NOSTALGIA = ITEMS.registerItem("music_disc_nostalgia",
+            Item::new,
+            () -> new Item.Properties().stacksTo(1).rarity(Rarity.RARE)
+                    .jukeboxPlayable(ResourceKey.create(Registries.JUKEBOX_SONG, Identifier.fromNamespaceAndPath(GatheringGrounds.MOD_ID, "nostalgia"))));
 
     private static DeferredItem<Item> registerHerbFood(String name, DeferredBlock<Block> block, FoodProperties food) {
         return registerHerbFood(name, block, food, Consumables.DEFAULT_FOOD);
